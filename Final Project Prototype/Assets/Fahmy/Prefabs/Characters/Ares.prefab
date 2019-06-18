@@ -4771,7 +4771,7 @@ ParticleSystem:
 --- !u!199 &747247471
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9490,7 +9490,7 @@ ParticleSystem:
 --- !u!199 &800211818
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14210,7 +14210,7 @@ ParticleSystem:
 --- !u!199 &1471363230
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18909,7 +18909,7 @@ ParticleSystem:
 --- !u!199 &1593760280
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23465,7 +23465,7 @@ ParticleSystem:
 --- !u!199 &1685473341
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23717,7 +23717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsControllerInAir: 0
   IsControllerThrowing: 0
-  event: {fileID: 11400000, guid: 5603e82dc21abc045b27f944976974f1, type: 2}
+  event: {fileID: 11400000, guid: d1a43d68fe82ee24ea5acb51f20dcd1e, type: 2}
   currentStamina: 100
   fixRate: 1
   id: 5

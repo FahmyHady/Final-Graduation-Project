@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [ReadOnlyWhenPlaying]
     [SerializeField] private int maxLeaderBoardTeams = 5;
     [SerializeField] private int maxRounds;
+    [SerializeField] private int maxInteractableFixed;
     int playedRound;
     int[] rounds;
     List<PlayerInfo> players;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public List<PlayerInfo> Players { get => players; set => players = value; }
     public int[] Rounds { get => rounds; set => rounds = value; }
     public SaveLoadScoreHandler Teams { get => teams; set => teams = value; }
+    public int MaxInteractableFixed { get => maxInteractableFixed; set => maxInteractableFixed = value; }
     #endregion Properties
 
     #region Methods

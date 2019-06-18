@@ -14077,7 +14077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsControllerInAir: 0
   IsControllerThrowing: 0
-  event: {fileID: 11400000, guid: 3d2b664d0707a70459b7aa5aaf598fed, type: 2}
+  event: {fileID: 11400000, guid: 5603e82dc21abc045b27f944976974f1, type: 2}
   currentStamina: 100
   fixRate: 0
   id: 0
@@ -14127,7 +14127,6 @@ MonoBehaviour:
   beingThrown: 0
   rateOfThrow: 1.5
   tangentHeight: 7
-  myCurve: {fileID: 0}
 --- !u!114 &6112385314709315956
 MonoBehaviour:
   m_ObjectHideFlags: 0

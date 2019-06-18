@@ -12,17 +12,18 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private RandomPlaceManager placeManager;
     [SerializeField] Canvas mainCanvas;
     int interactablesNum = 0;
+    float bounsTime;
     #endregion Fields
 
     #region Properties
     public static RoundManager Instance { get => instance; private set => instance = value; }
     public Canvas MainCanvas { get => mainCanvas; }
-
+    public float GetScore { get => parent.Score + children.Sum(i => i.Score); }
     #endregion Properties
 
     #region Methods
     public void SetInteractable() {
-        interactablesNum++;
+        //interactablesNum++;
     }
     public List<PlayerStateInfo> GetChildren()
     { return children; }
@@ -45,18 +46,43 @@ public class RoundManager : MonoBehaviour
     { if (Instance == null) Instance = this; }
 
     public void TimeEnd() {
-        RoundEnd(false);
+        if (interactablesNum == 0)
+            RoundEnd(true);
+        else
+        {
+            bounsTime = 0.0f;
+            RoundEnd(false);
+        }
+    }
+    public Color GetChildOutline(Character character) {
+        Color color =default;
+        switch (character)
+        {
+            case Character.Zeus:
+                color = children[2].Player.Outline;
+                break;
+            case Character.Aris:
+                color = children[1].Player.Outline;
+                break;
+            case Character.Aphrodite:
+                color = children[0].Player.Outline;
+                break;
+        }
+        return color;
     }
     public void FixItem() {
         interactablesNum--;
-        if (interactablesNum == 0) {
-            clock.StartClock();
-            RoundEnd(true);
+        if (interactablesNum < 0)
+        {
+            interactablesNum = 0;
+        }
+        else if (interactablesNum == 0) {
+            bounsTime = (clock.RemainingTime / 6);
         }
     }
     private void RoundEnd(bool isDone)
     {
-        GameManager.Instance.TotalScore += parent.Score + children.Sum(i => i.Score) + (clock.RemainingTime / 6);
+        GameManager.Instance.TotalScore += GetScore + bounsTime;
         GameManager.Instance.RoundEnd(isDone);
     }
 
@@ -65,6 +91,7 @@ public class RoundManager : MonoBehaviour
         placeManager.StartRandom();
         List<PlayerInfo> players = GameManager.Instance.Players;
         clock.StartClock();
+        interactablesNum = GameManager.Instance.MaxInteractableFixed;
         parent.Player = players[0];
         parent.CurrentStamina = parent.MaxStamina;
         for (int i = 0; i < children.Count; i++)

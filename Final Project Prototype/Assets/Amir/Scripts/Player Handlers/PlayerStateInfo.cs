@@ -38,6 +38,8 @@ public class PlayerStateInfo : MonoBehaviour
         {
             if (IsControllerDisable || IsControllerInAir || IsControllerThrowing)
                 return GetDisableContoller();
+            else if (IsFixing)
+                return GetFixingController();
             else if (IsControllerBurned)
                 return GetBurnedContoller();
             else if (IsControllerConfused)
@@ -67,6 +69,8 @@ public class PlayerStateInfo : MonoBehaviour
     public string PlayerInfo()
     { return $"P{PlayerController}:{Score}"; }
 
+    private GamepadState GetFixingController()
+    { return GamePad.ApplyMoveDisable(GamePad.GetState(Player.Controller)); }
     private GamepadState GetBurnedContoller()
     { return GamePad.GetState(GamePad.Index.Disable); }
 

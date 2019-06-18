@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+public enum Character { Zeus, Aris, Aphrodite };
 public class Child : BaseCharacter
 {
     #region Fields
@@ -8,7 +8,7 @@ public class Child : BaseCharacter
     #endregion Fields
 
     #region Enums
-    protected enum Character { Zeus, Aris, Aphrodite };
+    
     #endregion Enums
     public void disableOrEnableController()
     {
@@ -34,6 +34,7 @@ public class Child : BaseCharacter
                                     animator.SetTrigger("UsingSkill");
                                     disableOrEnableController();
                                     AudioManager.Play(AudioManager.AudioItems.Zeus, "BoltVL");
+
                                 }
                             }
                             break;
@@ -74,28 +75,37 @@ public class Child : BaseCharacter
                 {
                     case Character.Zeus:
 
-                        objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
                         skillOneUsed = false;
-                        myStateInfo.CurrentStamina -= skillOneStaminaCost;
                         disableOrEnableController();
-                        AudioManager.Play(AudioManager.AudioItems.Zeus, "Bolt");
+                        if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<Key>() != null)
+                        {
+                            objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
+                            objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
+                            myStateInfo.CurrentStamina -= skillOneStaminaCost;
+                            AudioManager.Play(AudioManager.AudioItems.Zeus, "Bolt");
+                        }
 
                         break;
                     case Character.Aris:
 
                         skillOneUsed = false;
-                        objectInFrontOfMe.gameObject.GetComponent<Breaking>().Explode();
-                        myStateInfo.CurrentStamina -= skillOneStaminaCost;
                         disableOrEnableController();
-                        AudioManager.Play(AudioManager.AudioItems.Aris, "Crash");
-
+                        if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<Breaking>() != null)
+                        {
+                            objectInFrontOfMe?.gameObject.GetComponent<Breaking>()?.Explode();
+                            myStateInfo.CurrentStamina -= skillOneStaminaCost;
+                            AudioManager.Play(AudioManager.AudioItems.Aris, "Crash");
+                        }
                         break;
                     case Character.Aphrodite:
                         skillOneUsed = false;
-                        objectInFrontOfMe.gameObject.GetComponent<Lifting>().Floating();
-                        myStateInfo.CurrentStamina -= skillOneStaminaCost;
                         disableOrEnableController();
-                        AudioManager.Play(AudioManager.AudioItems.Aphrodite, "MagicLift");
+                        if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<Lifting>() != null)
+                        {
+                            objectInFrontOfMe?.gameObject.GetComponent<Lifting>()?.Floating();
+                            myStateInfo.CurrentStamina -= skillOneStaminaCost;
+                            AudioManager.Play(AudioManager.AudioItems.Aphrodite, "MagicLift");
+                        }
                         break;
                 }
                 break;

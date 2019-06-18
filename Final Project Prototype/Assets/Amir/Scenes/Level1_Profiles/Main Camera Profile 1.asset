@@ -70,10 +70,10 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 0
-    value: -46
+    value: 29.5
   tint:
     overrideState: 0
-    value: -22
+    value: -23.11
   colorFilter:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -96,8 +96,8 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   mixerRedOutGreenIn:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 21.3
   mixerRedOutBlueIn:
     overrideState: 0
     value: 0
@@ -121,13 +121,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 0.97361535, z: 0.89446145, w: -0.053285964}
+    value: {x: 1, y: 0.7414892, z: 0.82654303, w: -0.053285964}
   gamma:
     overrideState: 1
-    value: {x: 0.92919165, y: 1, z: 0.96024096, w: -0.1953819}
+    value: {x: 0.92919165, y: 1, z: 0.96024096, w: -0.22753623}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.62332654, z: 0.8713, w: 0.44404984}
+    value: {x: 0.9673636, y: 1, z: 0.90788645, w: 0.44404984}
   masterCurve:
     overrideState: 0
     value:
@@ -1349,10 +1349,10 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 1.62
+    value: 1.49
   color:
-    overrideState: 0
-    value: {r: 0, g: 0, b: 0, a: 1}
+    overrideState: 1
+    value: {r: 0.05660379, g: 0, b: 0, a: 1}
   ambientOnly:
     overrideState: 0
     value: 1
@@ -1372,8 +1372,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   radius:
-    overrideState: 0
-    value: 0.25
+    overrideState: 1
+    value: 0.48
   quality:
     overrideState: 0
     value: 2
@@ -1395,7 +1395,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 3.67
+    value: 4.29
   threshold:
     overrideState: 0
     value: 0.15
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 2.77
+    value: 5.24
   anamorphicRatio:
     overrideState: 0
     value: 0
@@ -1441,29 +1441,29 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   mode:
-    overrideState: 0
+    overrideState: 1
     value: 0
   color:
     overrideState: 1
-    value: {r: 0.98039216, g: 0, b: 0, a: 1}
+    value: {r: 0.5283019, g: 0.0074759563, b: 0.0074759563, a: 1}
   center:
     overrideState: 0
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.273
+    value: 0.3
   smoothness:
     overrideState: 1
-    value: 0.34
+    value: 1
   roundness:
     overrideState: 1
-    value: 0.84
+    value: 1
   rounded:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mask:
-    overrideState: 0
-    value: {fileID: 0}
+    overrideState: 1
+    value: {fileID: 2800000, guid: fa0992792076aa04da8633aa94811448, type: 3}
     defaultState: 1
   opacity:
     overrideState: 0

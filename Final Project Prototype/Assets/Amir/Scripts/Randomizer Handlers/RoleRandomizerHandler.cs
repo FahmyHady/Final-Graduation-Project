@@ -20,7 +20,7 @@ public class RoleRandomizerHandler : MonoBehaviour, IRandomize
 
    
 
-    public void Ranomize(GameObject @object = null)
+    public void Ranomize(ref GameObject @object)
     {
         if (Infos.Count == Players.Count)
         {

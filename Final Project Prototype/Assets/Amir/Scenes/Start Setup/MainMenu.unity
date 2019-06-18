@@ -4140,6 +4140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Graphy]'
       objectReference: {fileID: 0}
+    - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7729,9 +7733,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLeaderBoardTeams: 5
-  maxRounds: 2
+  maxRounds: 4
+  maxInteractableFixed: 4
   minTime: 0
-  hTime: 1
+  hTime: 2
 --- !u!4 &2073960462
 Transform:
   m_ObjectHideFlags: 0
