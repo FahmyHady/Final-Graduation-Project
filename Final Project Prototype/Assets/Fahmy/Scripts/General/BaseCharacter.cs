@@ -7,13 +7,13 @@ public abstract class BaseCharacter : MonoBehaviour
 
     #region SkillsProperties
 
-    [Range(0, 20)]
+    [Range(2, 20)]
     public float coolDownOne;
 
-    [Range(0, 20)]
+    [Range(2, 20)]
     public float coolDownthree;
 
-    [Range(0, 20)]
+    [Range(2, 20)]
     public float coolDownTwo;
 
    

@@ -4762,7 +4762,7 @@ ParticleSystem:
 --- !u!199 &145410921
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9318,7 +9318,7 @@ ParticleSystem:
 --- !u!199 &145410925
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13854,7 +13854,7 @@ ParticleSystem:
 --- !u!199 &145410927
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14083,7 +14083,7 @@ MonoBehaviour:
   id: 0
   maxStamina: 100
   player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
-  regenRate: 1
+  regenRate: 0
   role: 5
   score: 0
   staminaChangeEvent: {fileID: 11400000, guid: 6df89fd0ad747754abe6b82c63d9e010, type: 2}
@@ -14139,12 +14139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb15e87fa2fc4248b8bfab585ac350c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDownOne: 0
-  coolDownthree: 0
-  coolDownTwo: 0
-  skillOneStaminaCost: 30
-  skillTwoStaminaCost: 8
-  skillThreeStaminaCost: 8
+  coolDownOne: 2
+  coolDownthree: 2
+  coolDownTwo: 2
+  skillOneStaminaCost: 10
+  skillTwoStaminaCost: 1
+  skillThreeStaminaCost: 1
   speed: 500
   slowResistance: 1
   maxSpeed: 2
@@ -14152,7 +14152,7 @@ MonoBehaviour:
   fixRateFieldParticleEffect: {fileID: 339549511887505307}
   grabReach: 2
   regenFieldParticleEffect: {fileID: 3160821268488390332}
-  staminaRegeImprovedRate: 15
+  staminaRegeImprovedRate: 2
   throwingHandle: {fileID: 526527106}
 --- !u!135 &807710809
 SphereCollider:
