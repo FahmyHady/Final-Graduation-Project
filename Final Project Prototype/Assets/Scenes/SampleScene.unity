@@ -5269,8 +5269,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-  m_AmplitudeGain: 1
-  m_FrequencyGain: 1
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 2
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &251540079
 GameObject:
@@ -6282,7 +6282,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b00662b9a4b6d6548b91a5ce18c2edda, type: 3}
+      objectReference: {fileID: 8300000, guid: 899ef806cdbeb774397355498c594dd2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe417498020e6134783b7e041154181e, type: 3}
 --- !u!4 &303145083 stripped
@@ -10569,7 +10569,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.23503198, y: -0.048622373, z: 0.011772836, w: -0.97069937}
+  m_LocalRotation: {x: -0.23503198, y: -0.048622377, z: 0.011772841, w: -0.97069937}
   m_LocalPosition: {x: -40.803173, y: 7.429403, z: 0.7354351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -35977,7 +35977,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734855857}
-  m_LocalRotation: {x: -0.23503198, y: -0.048622373, z: 0.011772836, w: -0.97069937}
+  m_LocalRotation: {x: -0.23503198, y: -0.048622377, z: 0.011772841, w: -0.97069937}
   m_LocalPosition: {x: -40.97077, y: 8.29216, z: -0.93334675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6994432651338677947}
   - component: {fileID: 6994432651338677946}
   - component: {fileID: 1853597779023606359}
-  - component: {fileID: 5513036268623333843}
   - component: {fileID: 8768021896772570096}
+  - component: {fileID: 4622049539976858332}
   m_Layer: 14
   m_Name: Meteor
   m_TagString: Untagged
@@ -4707,19 +4707,6 @@ MonoBehaviour:
   particle: {fileID: 6994432651338677947}
   rotSpeed: 89.13
   target: {x: 0, y: 0, z: 0}
---- !u!135 &5513036268623333843
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6994432651338677944}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.62
-  m_Center: {x: -0.085662, y: 0.042945497, z: 0.009728013}
 --- !u!54 &8768021896772570096
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4736,6 +4723,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &4622049539976858332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6994432651338677944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4019115, y: 1.0018358, z: 2.4964664}
+  m_Center: {x: 0.024285743, y: 0.041443836, z: -0.08019907}
 --- !u!1001 &17639269887268333
 PrefabInstance:
   m_ObjectHideFlags: 0
