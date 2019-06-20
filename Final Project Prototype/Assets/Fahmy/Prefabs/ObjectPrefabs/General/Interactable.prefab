@@ -792,6 +792,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6761969565519167521}
     m_Modifications:
+    - target: {fileID: 100000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
+      propertyPath: m_Name
+      value: CFX2_WWExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -835,14 +843,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
-      propertyPath: m_Name
-      value: CFX2_WWExplosion
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: dc6da1d6e30d6dd42ae82d67fdea65a3, type: 3}
       propertyPath: stopAction
