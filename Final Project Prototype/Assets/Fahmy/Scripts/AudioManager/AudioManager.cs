@@ -12,13 +12,13 @@ public class AudioManager : MonoBehaviour
     public SoundSources Zeus;
     public SoundSources MainMenu;
     public SoundSources Skill;
-    public SoundSources Skill2;
+    public SoundSources Teleport;
 
     public AudioSource S_Aphrodite;
     public AudioSource S_Aris;
     public AudioSource S_BackgroundMusic;
     public AudioSource S_Event;
-    public AudioSource S_Skill2;
+    public AudioSource S_Teleport;
     //----------------------------------------------
     public AudioSource S_Hera;
     public AudioSource S_Interactable;
@@ -33,12 +33,13 @@ public class AudioManager : MonoBehaviour
 
     #region Enums
     public enum AudioItems
-    { Hera, Zeus, Aris, Aphrodite, MainMenu, Interactable, Skill, Skill2, Event, BackgroundMusic }
+    { Hera, Zeus, Aris, Aphrodite, MainMenu, Interactable, Skill, Teleport, Event, BackgroundMusic }
     #endregion Enums
 
     #region Methods
     public static void Play(AudioItems whoseAudio, string soundName)
     {
+        Debug.Log(soundName);
         StaticAudioManager.PlaySound(whoseAudio, soundName);
     }
     void PlaySound(AudioItems whoseAudio, string soundName)
@@ -88,8 +89,8 @@ public class AudioManager : MonoBehaviour
                 CheckSound(BackgroundMusic, S_BackgroundMusic, soundName);
                 break;
 
-            case AudioItems.Skill2:
-                CheckSound(Skill2, S_Skill2, soundName);
+            case AudioItems.Teleport:
+                CheckSound(Teleport, S_Teleport, soundName);
                 break;
         }
 

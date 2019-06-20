@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public void NewGame() {
         totalScore = 0.0f;
         playedRound = 0;
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start2");
         Rounds = new int[maxRounds];
         SceneManager.LoadSceneAsync(1);
     }
