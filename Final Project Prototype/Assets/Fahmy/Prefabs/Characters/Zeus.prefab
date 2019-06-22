@@ -4674,7 +4674,7 @@ ParticleSystem:
 --- !u!199 &299870281
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9503,7 +9503,7 @@ ParticleSystem:
 --- !u!199 &1147089566
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14210,7 +14210,7 @@ ParticleSystem:
 --- !u!199 &1740809224
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18746,7 +18746,7 @@ ParticleSystem:
 --- !u!199 &1940906256
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23568,7 +23568,7 @@ ParticleSystem:
 --- !u!199 &2033903651
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23731,7 +23731,7 @@ MonoBehaviour:
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: addd3cbeb274888438b2f38d4143a9eb, type: 2}
   currentStamina: 100
-  fixRate: 1
+  fixRate: 0.5
   id: 5
   maxStamina: 100
   player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
@@ -23754,7 +23754,7 @@ MonoBehaviour:
   coolDownOne: 0
   coolDownthree: 0
   coolDownTwo: 0
-  skillOneStaminaCost: 10
+  skillOneStaminaCost: 50
   skillTwoStaminaCost: 0
   skillThreeStaminaCost: 0
   speed: 500
@@ -23900,11 +23900,7 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 12cac73a1d8f1de4980f65400e9c34e1, type: 2}
-    - target: {fileID: 13700000, guid: 7f4b6724edf61a14f9a9f328452c7e79, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 71c15053cf1ed904481e9da3d8ee9819, type: 2}
-    - target: {fileID: 13700002, guid: 7f4b6724edf61a14f9a9f328452c7e79, type: 3}
+    - target: {fileID: 2300000, guid: 7f4b6724edf61a14f9a9f328452c7e79, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 71c15053cf1ed904481e9da3d8ee9819, type: 2}
