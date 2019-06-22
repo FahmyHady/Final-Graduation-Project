@@ -147,6 +147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
+        type: 3}
+      propertyPath: m_Name
+      value: broken_Shield
+      objectReference: {fileID: 0}
     - target: {fileID: 3659776047594603387, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Radius
@@ -166,11 +171,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_Name
-      value: broken_Shield
       objectReference: {fileID: 0}
     - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
@@ -247,11 +247,6 @@ PrefabInstance:
       propertyPath: meshes.Array.data[3]
       value: 
       objectReference: {fileID: 4300004, guid: c580ef99851e6314987188cc3a689b87, type: 3}
-    - target: {fileID: 6761969565519167523, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c74f1e145f6c69b4bacb6e315698d2d7, type: 2}
     - target: {fileID: 6761969565519167522, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Mesh
@@ -312,6 +307,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6761969565519167523, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c74f1e145f6c69b4bacb6e315698d2d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1e391b1fa7e74a4a9ecdb7bea568122, type: 3}
 --- !u!4 &7009831189070218475 stripped

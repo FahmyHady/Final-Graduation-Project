@@ -4839,7 +4839,7 @@ ParticleSystem:
 --- !u!199 &1931803696
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9655,7 +9655,7 @@ ParticleSystem:
 --- !u!199 &1931803700
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14408,7 +14408,7 @@ ParticleSystem:
 --- !u!199 &1937506352
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18964,7 +18964,7 @@ ParticleSystem:
 --- !u!199 &1937506356
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23500,7 +23500,7 @@ ParticleSystem:
 --- !u!199 &1937506358
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23731,7 +23731,7 @@ MonoBehaviour:
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: 3d2b664d0707a70459b7aa5aaf598fed, type: 2}
   currentStamina: 100
-  fixRate: 1
+  fixRate: 0.5
   id: 5
   maxStamina: 100
   player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
@@ -23754,7 +23754,7 @@ MonoBehaviour:
   coolDownOne: 0
   coolDownthree: 0
   coolDownTwo: 0
-  skillOneStaminaCost: 10
+  skillOneStaminaCost: 50
   skillTwoStaminaCost: 0
   skillThreeStaminaCost: 0
   speed: 500
