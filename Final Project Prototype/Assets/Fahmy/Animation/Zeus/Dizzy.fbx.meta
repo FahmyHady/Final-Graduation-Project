@@ -88,7 +88,12 @@ ModelImporter:
     13700000: zeus_body_low
     13700002: zeus_low
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 71c15053cf1ed904481e9da3d8ee9819, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -100,9 +105,15 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
-      does not match:\n\tTransform 'Hips' for human bone 'Hips' not found\n"
-    rigImportWarnings: 
+    rigImportErrors: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
+      : position error = 6.740461 mm\n\t'mixamorig:LeftLeg' : position error = 15.825279
+      mm\n\t'mixamorig:LeftFoot' : position error = 30.262655 mm\n\t'mixamorig:LeftToeBase'
+      : position error = 5.278410 mm\n\t'mixamorig:RightUpLeg' : position error =
+      5.199781 mm\n\t'mixamorig:RightLeg' : position error = 15.427382 mm\n\t'mixamorig:RightFoot'
+      : position error = 30.644651 mm\n\t'mixamorig:RightToeBase' : position error
+      = 2.192191 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 

@@ -21,7 +21,7 @@ public class PlayerStateInfo : MonoBehaviour
     [SerializeField] private PlayerInfo player;
     //[SerializeField] private GamePad.Index playerController;
 
-    [Range(1, 200)]
+    [Range(0, 200)]
     [ReadOnlyWhenPlaying]
     [SerializeField] private float regenRate;
 
