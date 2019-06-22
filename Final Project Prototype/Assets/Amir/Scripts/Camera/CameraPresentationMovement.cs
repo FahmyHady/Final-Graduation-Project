@@ -44,4 +44,5 @@ public class CameraPresentationMovement : MonoBehaviour
             currentIndex = temp;
         }
     }
+
 }
