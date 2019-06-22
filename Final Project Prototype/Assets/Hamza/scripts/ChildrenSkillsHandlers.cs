@@ -10,7 +10,9 @@ public class ChildrenSkillsHandlers : MonoBehaviour
 
     #region Methods
     private void LateUpdate()
-    { child.animator.SetFloat(child.CharacterVelocityAnimator, child.rb.velocity.magnitude);
+    {
+       
+        child.animator.SetFloat(child.CharacterVelocityAnimator, child.rb.velocity.magnitude);
         child.animator.SetBool("InAir", child.myStateInfo.IsControllerInAir);
         child.animator.SetBool("Burning", child.myStateInfo.IsControllerBurned);
         child.animator.SetBool("Fixing", child.myStateInfo.IsFixing);

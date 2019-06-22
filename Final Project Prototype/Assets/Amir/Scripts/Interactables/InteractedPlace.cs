@@ -6,7 +6,6 @@ public class InteractedPlace : MonoBehaviour
     #region Fields
     [SerializeField] private GameEvent @eventEnter;
     [SerializeField] private GameEvent @eventExit;
-    [SerializeField] private SphereCollider collider;
     private bool isLocked;
     [SerializeField] [TagSelector] private string playerTag;
     #endregion Fields
@@ -35,9 +34,5 @@ public class InteractedPlace : MonoBehaviour
 
     
 
-    private void Start()
-    {
-        collider.isTrigger = true;
-    }
     #endregion Methods
 }

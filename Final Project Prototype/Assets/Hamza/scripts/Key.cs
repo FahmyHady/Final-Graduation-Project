@@ -39,8 +39,8 @@ public class Key : MonoBehaviour
 
     public void vanish()
     {
-        Destroy(Instantiate(lightingStrike, transform.position, transform.rotation), 3);
-        Destroy(Instantiate(lightingStrike, Door.transform.position, Door.transform.rotation), 3);
+        Instantiate(lightingStrike, transform.position, transform.rotation);
+       Instantiate(lightingStrike, Door.transform.position, Door.transform.rotation);
         interacted = true;
         //Door.SetActive(false);
     }

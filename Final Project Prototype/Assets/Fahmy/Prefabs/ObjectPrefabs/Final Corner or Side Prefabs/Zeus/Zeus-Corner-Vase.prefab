@@ -52,14 +52,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8211518635353613343}
     m_Modifications:
-<<<<<<< HEAD
     - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Name
       value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-=======
+        type: 3}
+      propertyPath: m_Name
+      value: broken_vase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4002118671458073730, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_IsActive
@@ -70,20 +77,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
->>>>>>> ea29f56114b9f88705014a2877092aedeb5c85cc
-        type: 3}
-      propertyPath: m_Name
-      value: Interactable
-      objectReference: {fileID: 0}
     - target: {fileID: 3659776047594603387, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 3659776047594603389, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-=======
     - target: {fileID: 3659776047594603387, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Center.z
@@ -110,7 +108,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4002118671458073736, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
->>>>>>> ea29f56114b9f88705014a2877092aedeb5c85cc
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -180,43 +177,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.35
-=======
-    - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_Name
-      value: broken_vase
->>>>>>> ea29f56114b9f88705014a2877092aedeb5c85cc
-      objectReference: {fileID: 0}
-    - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6761969565519167521, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -246,27 +206,27 @@ PrefabInstance:
         type: 3}
       propertyPath: meshes.Array.data[0]
       value: 
-      objectReference: {fileID: 4300042, guid: 7723010c91cec03478d45be35ec39e82, type: 3}
+      objectReference: {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
     - target: {fileID: 6761969565519167520, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: meshes.Array.data[1]
       value: 
-      objectReference: {fileID: 4300042, guid: 7723010c91cec03478d45be35ec39e82, type: 3}
+      objectReference: {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
     - target: {fileID: 6761969565519167520, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: meshes.Array.data[2]
       value: 
-      objectReference: {fileID: 4300044, guid: 7723010c91cec03478d45be35ec39e82, type: 3}
+      objectReference: {fileID: 4300000, guid: adbe86dbe41ed214faff97b1aea299f5, type: 3}
     - target: {fileID: 6761969565519167520, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: meshes.Array.data[3]
       value: 
-      objectReference: {fileID: 4300044, guid: 7723010c91cec03478d45be35ec39e82, type: 3}
+      objectReference: {fileID: 4300000, guid: adbe86dbe41ed214faff97b1aea299f5, type: 3}
     - target: {fileID: 6761969565519167522, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300042, guid: 7723010c91cec03478d45be35ec39e82, type: 3}
+      objectReference: {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
     - target: {fileID: 4002118671458073742, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_IsActive
@@ -397,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 8211518635470346496, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 8211518635470346496, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}
@@ -407,7 +367,7 @@ PrefabInstance:
     - target: {fileID: 8211518635470346496, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 8211518635470346496, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}
