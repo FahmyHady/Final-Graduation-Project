@@ -33,7 +33,6 @@ public class UINavigationHandler : MonoBehaviour
 
     public void Submit()
     {
-        Debug.Log(AudioManager.AudioItems.MainMenu);
         currentButton = EventSystem.current.currentSelectedGameObject;
         ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.submitHandler);
     }
@@ -58,7 +57,6 @@ public class UINavigationHandler : MonoBehaviour
         currentButton = EventSystem.current.currentSelectedGameObject;
         if (Input.GetKeyDown(KeyCode.Tab)) {
             currentAxis.moveDir = MoveDirection.Down;
-            Debug.Log("tab");
             ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.moveHandler);
         }
     }

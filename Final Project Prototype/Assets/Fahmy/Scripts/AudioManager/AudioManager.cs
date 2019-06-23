@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour
     #region Methods
     public static void Play(AudioItems whoseAudio, string soundName)
     {
-        Debug.Log(soundName);
         StaticAudioManager.PlaySound(whoseAudio, soundName);
     }
     void PlaySound(AudioItems whoseAudio, string soundName)
