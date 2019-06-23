@@ -65,12 +65,14 @@ public class SlotHandler : MonoBehaviour
     private void HandleNextColor()
     {
         outLine = SlotManager.Manager.GetNextColor(ref colorIndex);
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
         assignPanelHandler?.SetPanelColor(outLine);
     }
 
     private void HandlePrevColor()
     {
         outLine = SlotManager.Manager.GetPrevColor(ref colorIndex);
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
         assignPanelHandler?.SetPanelColor(outLine);
     }
 
@@ -100,6 +102,7 @@ public class SlotHandler : MonoBehaviour
             else if (GamePad.GetButtonDown(SlotManager.Manager.AcceptedBtnKey, controller) && IsDone)
             {
                 State = SlotState.Stady;
+                AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start");
                 SlotManager.Manager.Ready(outLine);
             }
             else if (!IsDone) { IsDone = true; }

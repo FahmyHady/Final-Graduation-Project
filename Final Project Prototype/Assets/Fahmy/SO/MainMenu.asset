@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: MainMenu
   m_EditorClassIdentifier: 
   _Audios:
-  - audioName: 
-    audio: {fileID: 0}
+    m_keys:
+    - Accept
+    - Back
+    - Hover
+    - Start
+    - Start2
+    m_values:
+    - {fileID: 8300000, guid: df6e88a84521a9945b17d494259423fe, type: 3}
+    - {fileID: 8300000, guid: 4d63c959082d51148b46aea103f6229e, type: 3}
+    - {fileID: 8300000, guid: 583103efda282874786fc44fa45f06f7, type: 3}
+    - {fileID: 8300000, guid: d75f6c430a0bc4e4fab537a39ee1e6a2, type: 3}
+    - {fileID: 8300000, guid: 6b616a439b55f2445a92d8499f00a678, type: 3}

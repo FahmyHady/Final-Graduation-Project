@@ -13,8 +13,8 @@ public class UINavigationHandler : MonoBehaviour
     private float timer = 0;
     [SerializeField] private GameObject defaultButtonObj;
     [SerializeField] private GameObject backButtonObj;
-    [SerializeField] private bool useAcceptBackBtn;
     [SerializeField] private bool useTabMovement;
+    [SerializeField] private bool useAcceptBackBtn;
     [ConditionalHide(nameof(useAcceptBackBtn), true)]
     [SerializeField] private GamePad.Button acceptBtn;
     [ConditionalHide(nameof(useAcceptBackBtn), true)]
@@ -25,11 +25,15 @@ public class UINavigationHandler : MonoBehaviour
 
     public void Back()
     {
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Back");
+
         ExecuteEvents.Execute(backButtonObj, currentAxis, ExecuteEvents.submitHandler);
+
     }
 
     public void Submit()
     {
+        Debug.Log(AudioManager.AudioItems.MainMenu);
         currentButton = EventSystem.current.currentSelectedGameObject;
         ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.submitHandler);
     }
@@ -46,6 +50,7 @@ public class UINavigationHandler : MonoBehaviour
     {
         if (GamePad.GetButtonDown(acceptBtn, GamePad.Index.Any) && useAcceptBackBtn)
         {
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Accept");
             Submit();
         }
     }
@@ -53,6 +58,7 @@ public class UINavigationHandler : MonoBehaviour
         currentButton = EventSystem.current.currentSelectedGameObject;
         if (Input.GetKeyDown(KeyCode.Tab)) {
             currentAxis.moveDir = MoveDirection.Down;
+            Debug.Log("tab");
             ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.moveHandler);
         }
     }
@@ -65,12 +71,14 @@ public class UINavigationHandler : MonoBehaviour
             if (axis.y > 0)
             {
                 currentAxis.moveDir = MoveDirection.Up;
+                AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
                 ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.moveHandler);
                 timer = timeBetweenInputs;
             }
             else if (axis.y < 0)
             {
                 currentAxis.moveDir = MoveDirection.Down;
+                AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
                 ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.moveHandler);
                 timer = timeBetweenInputs;
             }
