@@ -7,6 +7,7 @@ public class PlayerStateInfo : MonoBehaviour
     public bool IsControllerInAir;
     public bool IsControllerThrowing;
     [SerializeField] private GameEvent @event;
+    [SerializeField] private GameEvent @eventPlayerChange;
     [SerializeField] private float currentStamina;
     [SerializeField] private float fixRate;
     [SerializeField] private int id;
@@ -56,7 +57,7 @@ public class PlayerStateInfo : MonoBehaviour
     public bool IsControllerConfused { get => isControllerConfused; set => isControllerConfused = value; }
     public bool IsFixing { get => isFixing; set => isFixing = value; }
     public float MaxStamina { get => maxStamina; }
-    public PlayerInfo Player { get => player; set => player = value; }
+    public PlayerInfo Player { get => player; set { player = value; @eventPlayerChange.Raise(); } }
     public int PlayerController { get => (int)Player.Controller; }
     public float RegenRate { get => regenRate; set => regenRate = value; }
     public PlayerRole Role { get => role; set => role = value; }

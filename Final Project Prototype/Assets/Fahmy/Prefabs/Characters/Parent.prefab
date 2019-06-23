@@ -14034,6 +14034,8 @@ GameObject:
   - component: {fileID: 6018306240266469342}
   - component: {fileID: 6744501817515852257}
   - component: {fileID: 7827805485746952339}
+  - component: {fileID: 3406119701720661847}
+  - component: {fileID: 7099057755438102032}
   m_Layer: 12
   m_Name: Parent
   m_TagString: Parent
@@ -14090,10 +14092,11 @@ MonoBehaviour:
   IsControllerInAir: 0
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: 5603e82dc21abc045b27f944976974f1, type: 2}
-  currentStamina: 100
+  eventPlayerChange: {fileID: 11400000, guid: b23b7a600bbf1d847bce47feeb979bfa, type: 2}
+  currentStamina: 1000
   fixRate: 0
   id: 0
-  maxStamina: 100
+  maxStamina: 200
   player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
   regenRate: 10
   role: 5
@@ -14223,6 +14226,50 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6018306240266469342}
         m_MethodName: OnStaminaChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &3406119701720661847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112385314709315912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d82427f71ef068459627a8e4e2d5baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 6112385314709315918}
+  outlinePlayerMat: {fileID: 2100000, guid: ace554b28b3c23448817bd8c63e751ff, type: 2}
+  outlineObsMat: {fileID: 0}
+--- !u!114 &7099057755438102032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6112385314709315912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97976375e4ba14eaaacccdd99bd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: b23b7a600bbf1d847bce47feeb979bfa, type: 2}
+  handle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3406119701720661847}
+        m_MethodName: SetOutlineColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

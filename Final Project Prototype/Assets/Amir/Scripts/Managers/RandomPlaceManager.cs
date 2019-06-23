@@ -37,7 +37,8 @@ public class RandomPlaceManager : MonoBehaviour
             return;
         int randWeight = Random.Range(placeRand.minWeight, placeRand.maxWeight);
         var SelectedObj = placeRand.placeObjs.Where(i => i.GetComponentInChildren<RandomPlaceObj>().Amount <= randWeight).Select(i => i).ToList();
-        placeRand.place.RandPlace(SelectedObj[0], delay);
+        value = Random.Range(0, SelectedObj.Count - 1);
+        placeRand.place.RandPlace(SelectedObj[value], delay);
     }
 }
 [System.Serializable]

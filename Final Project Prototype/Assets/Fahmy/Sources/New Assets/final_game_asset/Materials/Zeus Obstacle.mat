@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ares
+  m_Name: Zeus Obstacle
   m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 94c018562591ca04c8b88ff7d5e88e4b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6857553711fbff5429c80f4049db5f30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -70,7 +70,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.002
+    - _Outline: 0.005
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -78,6 +78,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0.15520048, b: 1, a: 1}
+    - _Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}

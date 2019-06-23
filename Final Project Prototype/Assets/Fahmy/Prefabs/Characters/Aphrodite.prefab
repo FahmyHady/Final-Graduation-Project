@@ -23676,6 +23676,8 @@ GameObject:
   - component: {fileID: 3480361174827892542}
   - component: {fileID: 5584169566586481685}
   - component: {fileID: 1398726177202119058}
+  - component: {fileID: 2935332424990878376}
+  - component: {fileID: 4014758761637605244}
   m_Layer: 9
   m_Name: Aphrodite
   m_TagString: Child
@@ -23730,6 +23732,7 @@ MonoBehaviour:
   IsControllerInAir: 0
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: 3d2b664d0707a70459b7aa5aaf598fed, type: 2}
+  eventPlayerChange: {fileID: 11400000, guid: 0ba056667c9231f4ea634eb6dafa0d1c, type: 2}
   currentStamina: 100
   fixRate: 0.5
   id: 5
@@ -23830,6 +23833,50 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8081064677098434876}
         m_MethodName: OnStaminaChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2935332424990878376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d82427f71ef068459627a8e4e2d5baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 76468555905258201}
+  outlinePlayerMat: {fileID: 2100000, guid: 5a56b33b9453f744096a0003a2a00dfe, type: 2}
+  outlineObsMat: {fileID: 2100000, guid: 18950a38547bf4c4b82bc81f8e0ecb2d, type: 2}
+--- !u!114 &4014758761637605244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97976375e4ba14eaaacccdd99bd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 0ba056667c9231f4ea634eb6dafa0d1c, type: 2}
+  handle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2935332424990878376}
+        m_MethodName: SetOutlineColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

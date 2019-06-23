@@ -23664,6 +23664,8 @@ GameObject:
   - component: {fileID: 2834895458765630501}
   - component: {fileID: 2393256577160932101}
   - component: {fileID: 8163948796495788149}
+  - component: {fileID: 1385628563723444286}
+  - component: {fileID: 7759702414211112350}
   m_Layer: 9
   m_Name: Ares
   m_TagString: Child
@@ -23718,7 +23720,8 @@ MonoBehaviour:
   IsControllerInAir: 0
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: d1a43d68fe82ee24ea5acb51f20dcd1e, type: 2}
-  currentStamina: 100
+  eventPlayerChange: {fileID: 11400000, guid: 84e800d962c65e2458b037ffd74ac8b5, type: 2}
+  currentStamina: 50
   fixRate: 0.5
   id: 5
   maxStamina: 100
@@ -23829,6 +23832,50 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1385628563723444286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97976375e4ba14eaaacccdd99bd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 84e800d962c65e2458b037ffd74ac8b5, type: 2}
+  handle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7759702414211112350}
+        m_MethodName: SetOutlineColor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &7759702414211112350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d82427f71ef068459627a8e4e2d5baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 76468555905258201}
+  outlinePlayerMat: {fileID: 2100000, guid: 9eba8f12406d6e14b87ea95627756400, type: 2}
+  outlineObsMat: {fileID: 2100000, guid: db1596e9370e207408089058f0759c48, type: 2}
 --- !u!114 &7829482742402573269
 MonoBehaviour:
   m_ObjectHideFlags: 0

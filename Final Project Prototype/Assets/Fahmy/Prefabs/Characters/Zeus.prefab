@@ -23676,6 +23676,8 @@ GameObject:
   - component: {fileID: 3707023940389674144}
   - component: {fileID: 675380812534354653}
   - component: {fileID: 6329853924884078130}
+  - component: {fileID: 5204960651963121098}
+  - component: {fileID: 7520832016717250779}
   m_Layer: 9
   m_Name: Zeus
   m_TagString: Child
@@ -23730,6 +23732,7 @@ MonoBehaviour:
   IsControllerInAir: 0
   IsControllerThrowing: 0
   event: {fileID: 11400000, guid: addd3cbeb274888438b2f38d4143a9eb, type: 2}
+  eventPlayerChange: {fileID: 11400000, guid: 7f354c48ed2ec344fb28bf88bcd3d4d1, type: 2}
   currentStamina: 100
   fixRate: 0.5
   id: 5
@@ -23830,6 +23833,50 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4098559153251547715}
         m_MethodName: OnStaminaChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &5204960651963121098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d82427f71ef068459627a8e4e2d5baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 76468555905258201}
+  outlinePlayerMat: {fileID: 2100000, guid: 71c15053cf1ed904481e9da3d8ee9819, type: 2}
+  outlineObsMat: {fileID: 2100000, guid: a8ac41f3a2fedf546979a74bda2fe922, type: 2}
+--- !u!114 &7520832016717250779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926396930713105467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97976375e4ba14eaaacccdd99bd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 7f354c48ed2ec344fb28bf88bcd3d4d1, type: 2}
+  handle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5204960651963121098}
+        m_MethodName: SetOutlineColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

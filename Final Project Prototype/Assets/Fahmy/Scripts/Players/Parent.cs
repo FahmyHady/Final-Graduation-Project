@@ -22,7 +22,9 @@ public class Parent : BaseCharacter
     private Vector3 targetLocationPad;
     [SerializeField] private Transform throwingHandle;
 
-    float finalRate;
+    float finalFixRate;
+    float finalRegenRate;
+
     #endregion Fields
 
     #region Methods
@@ -89,25 +91,43 @@ public class Parent : BaseCharacter
             skillThreeUsed = true;
             myStateInfo.RegenRate = -skillThreeStaminaCost;
             fixRateFieldParticleEffect.SetActive(true);
-            CalculateFinalRate();
-            CalculateFinalRate();
-            ApplyFinalRate();
+            CalculateFinalFixRate();
+            ApplyFinalFixRate();
         }
     }
-    void CalculateFinalRate()
+    void CalculateFinalFixRate()
     {
-        finalRate = originalFixRate + (fixImprovedRate / playersToAid.Count);
+        finalFixRate = originalFixRate + (fixImprovedRate / playersToAid.Count);
 
     }
-    void ApplyFinalRate()
+    void CalculateFinalRegenRate()
+    {
+        finalRegenRate = originalRegenRate + (staminaRegeImprovedRate / playersToAid.Count);
+
+    }
+
+    void ApplyFinalFixRate()
     {
         if (playersToAid.Count > 0)
         {
             foreach (var item in playersToAid)
             {
-                if (item.Value.RegenRate != finalRate)
+                if (item.Value.FixRate != finalFixRate)
                 {
-                    item.Value.RegenRate = finalRate;
+                    item.Value.FixRate = finalFixRate;
+                }
+            }
+        }
+    }
+    void ApplyFinalRegenRate()
+    {
+        if (playersToAid.Count > 0)
+        {
+            foreach (var item in playersToAid)
+            {
+                if (item.Value.RegenRate != finalRegenRate)
+                {
+                    item.Value.RegenRate = finalRegenRate;
                 }
             }
         }
@@ -119,8 +139,8 @@ public class Parent : BaseCharacter
             skillTwoUsed = true;
             myStateInfo.RegenRate = -skillTwoStaminaCost;
             regenFieldParticleEffect.SetActive(true);
-            CalculateFinalRate();
-            ApplyFinalRate();
+            CalculateFinalRegenRate();
+            ApplyFinalRegenRate();
         }
     }
 
@@ -150,13 +170,19 @@ public class Parent : BaseCharacter
             playersToAid.Add(other, other.gameObject.GetComponentInParent<PlayerStateInfo>());
             originalFixRate = playersToAid[other].FixRate;
             originalRegenRate = playersToAid[other].RegenRate;
-            if (skillTwoUsed || skillThreeUsed)
+            if (skillTwoUsed  )
             {
-                CalculateFinalRate();
-                ApplyFinalRate();
+                CalculateFinalRegenRate();
+                ApplyFinalRegenRate();
+            }
+            else if(skillThreeUsed)
+            {
+                CalculateFinalFixRate();
+                ApplyFinalFixRate();
             }
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -165,10 +191,15 @@ public class Parent : BaseCharacter
             playersToAid[other].RegenRate = originalRegenRate;
             playersToAid[other].FixRate = originalFixRate;
             playersToAid.Remove(other);
-            if (skillTwoUsed || skillThreeUsed)
+            if (skillTwoUsed)
             {
-                CalculateFinalRate();
-                ApplyFinalRate();
+                CalculateFinalRegenRate();
+                ApplyFinalRegenRate();
+            }
+            else if (skillThreeUsed)
+            {
+                CalculateFinalFixRate();
+                ApplyFinalFixRate();
             }
         }
     }
