@@ -23742,7 +23742,7 @@ MonoBehaviour:
   coolDownOne: 0
   coolDownthree: 0
   coolDownTwo: 0
-  skillOneStaminaCost: 50
+  skillOneStaminaCost: 20
   skillTwoStaminaCost: 0
   skillThreeStaminaCost: 0
   speed: 500

@@ -14095,7 +14095,7 @@ MonoBehaviour:
   id: 0
   maxStamina: 100
   player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
-  regenRate: 2
+  regenRate: 10
   role: 5
   score: 0
   staminaChangeEvent: {fileID: 11400000, guid: 6df89fd0ad747754abe6b82c63d9e010, type: 2}
@@ -14155,8 +14155,8 @@ MonoBehaviour:
   coolDownthree: 0
   coolDownTwo: 0
   skillOneStaminaCost: 30
-  skillTwoStaminaCost: 5
-  skillThreeStaminaCost: 5
+  skillTwoStaminaCost: 10
+  skillThreeStaminaCost: 10
   speed: 500
   slowResistance: 1
   maxSpeed: 2
@@ -14164,7 +14164,7 @@ MonoBehaviour:
   fixRateFieldParticleEffect: {fileID: 339549511887505307}
   grabReach: 2
   regenFieldParticleEffect: {fileID: 3160821268488390332}
-  staminaRegeImprovedRate: 10
+  staminaRegeImprovedRate: 15
   throwingHandle: {fileID: 3248853183772000661}
 --- !u!135 &807710809
 SphereCollider:
@@ -14463,14 +14463,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12148815
-      objectReference: {fileID: 0}
-    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.1339172
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_Controller
       value: 
@@ -14482,6 +14474,14 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12148815
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1339172
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b999416787045249b46e176e99d61e4, type: 3}

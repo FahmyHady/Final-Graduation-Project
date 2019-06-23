@@ -80,7 +80,7 @@ public class Child : BaseCharacter
                         if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<Key>() != null)
                         {
                             objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
-                            objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
+                           // objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
                             myStateInfo.CurrentStamina -= skillOneStaminaCost;
                             AudioManager.Play(AudioManager.AudioItems.Zeus, "Bolt");
                         }

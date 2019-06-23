@@ -17,12 +17,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Amir/Scenes/GamePlaylevel.unity
     guid: 5cb135667c6a598449d9e030bcf62366
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d75bbbfb3baa17c4f96bac3f329d5d83
   - enabled: 1
     path: Assets/Scenes 3/SampleScene33.unity
     guid: 02caaa9784ddb384a8b61ee9f70cd64b
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: d75bbbfb3baa17c4f96bac3f329d5d83
   - enabled: 1
     path: Assets/Amir/Scenes/Start Setup/Winlevel.unity
     guid: d5c259ff5e378ff498b4e042abe92bec
