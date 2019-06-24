@@ -17,5 +17,5 @@ MonoBehaviour:
     - BoltVL
     - Bolt
     m_values:
-    - {fileID: 8300000, guid: 12329ccbc03c54b40894d40c12125b7e, type: 3}
+    - {fileID: 8300000, guid: 8099e4fe2c66506418c75efcd48cdbdc, type: 3}
     - {fileID: 8300000, guid: cf88e8f171d75754f9b85190765864be, type: 3}

@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Hera
   m_EditorClassIdentifier: 
   _Audios:
-    m_keys: []
-    m_values: []
+    m_keys:
+    - Skill2
+    - Skill3
+    m_values:
+    - {fileID: 8300000, guid: 710999a4ffe6abc4692d207897a16a9f, type: 3}
+    - {fileID: 8300000, guid: ae5bc166c618d054489b4e96af51884b, type: 3}

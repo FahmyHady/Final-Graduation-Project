@@ -25,6 +25,7 @@ public class LeaderBoardHandler : MonoBehaviour
         GameManager.Instance.EndGame(field.text);
     }
     public void NewGame() {
+        AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start");
         SceneManager.LoadSceneAsync(0); 
     }
 }
