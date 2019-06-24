@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 604175619}
-  m_IndirectSpecularColor: {r: 0.1677255, g: 0.23654845, b: 0.34691602, a: 1}
+  m_IndirectSpecularColor: {r: 0.16772506, g: 0.23654461, b: 0.34691486, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,6 +269,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217579887}
   m_CullTransparentMesh: 0
+--- !u!1001 &262738014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2755142263157214351, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.9459324
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.045816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.074469
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263157214350, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 136bd24d092e2c843a599db44a4d7abd, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe417498020e6134783b7e041154181e, type: 3}
 --- !u!1 &350210160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,8 +1359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultButtonObj: {fileID: 802635336}
   backButtonObj: {fileID: 0}
-  useAcceptBackBtn: 1
   useTabMovement: 0
+  useAcceptBackBtn: 1
   acceptBtn: 0
   backBtn: 1
 --- !u!1 &1241991249
@@ -1693,8 +1767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultButtonObj: {fileID: 350210160}
   backButtonObj: {fileID: 0}
-  useAcceptBackBtn: 1
   useTabMovement: 1
+  useAcceptBackBtn: 1
   acceptBtn: 0
   backBtn: 1
 --- !u!1 &1453505646
@@ -2045,6 +2119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLeaderBoardTeams: 5
   maxRounds: 2
+  maxInteractableFixed: 0
   minTime: 4
   hTime: 0
 --- !u!4 &2073960462

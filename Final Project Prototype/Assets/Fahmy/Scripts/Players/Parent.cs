@@ -91,6 +91,7 @@ public class Parent : BaseCharacter
             skillThreeUsed = true;
             myStateInfo.RegenRate = -skillThreeStaminaCost;
             fixRateFieldParticleEffect.SetActive(true);
+            AudioManager.Play(AudioManager.AudioItems.Hera, "Skill3");
             CalculateFinalFixRate();
             ApplyFinalFixRate();
         }
@@ -139,6 +140,7 @@ public class Parent : BaseCharacter
             skillTwoUsed = true;
             myStateInfo.RegenRate = -skillTwoStaminaCost;
             regenFieldParticleEffect.SetActive(true);
+            AudioManager.Play(AudioManager.AudioItems.Hera, "Skill2");
             CalculateFinalRegenRate();
             ApplyFinalRegenRate();
         }
