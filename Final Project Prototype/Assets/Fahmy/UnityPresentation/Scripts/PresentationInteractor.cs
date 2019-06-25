@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(PlayerStateInfo))]
 [ExecuteInEditMode]
-public class PlayerInteractor : MonoBehaviour
+public class PresentationInteractor : MonoBehaviour
 {
     #region Fields
     private InteractionType actType;
@@ -12,7 +12,7 @@ public class PlayerInteractor : MonoBehaviour
     private TimeHoldinghandler holdinghandler;
     private float holdTime;
     private PlayerStateInfo info;
-    private Interactable interactableObj;
+    private PresentationInteractable interactableObj;
     [SerializeField] private bool isDoingBad;
     private bool isHold;
     private bool isLeftPress;
@@ -32,7 +32,7 @@ public class PlayerInteractor : MonoBehaviour
     #endregion Delegates
 
     #region Properties
-    public Interactable InteractableObj { get => interactableObj; set => interactableObj = value; }
+    public PresentationInteractable InteractableObj { get => interactableObj; set => interactableObj = value; }
     public bool IsDoingBad { get => isDoingBad; set => isDoingBad = value; }
     public bool IsHold { get => isHold; set => isHold = value; }
     public bool IsPlaced { get => isPlaced; set => isPlaced = value; }
@@ -42,7 +42,7 @@ public class PlayerInteractor : MonoBehaviour
 
     #region Methods
 
-    public void Enter(Interactable act)
+    public void Enter(PresentationInteractable act)
     {
         InteractableObj = act;
         holdinghandler = act.GetComponent<TimeHoldinghandler>();
@@ -81,8 +81,9 @@ public class PlayerInteractor : MonoBehaviour
                 break;
 
             case InteractableType.Damaged:
-                if (gamepad.RightShoulderDown && (!InteractableObj.HasInteracted) && !isLocked) { Interact(InteractionType.Good); isRightPress = true; }
-                if (gamepad.RightShoulderUp && IsHold && isRightPress) { UnHold(); isRightPress = false; }
+                Debug.Log("hi");
+               Interact(InteractionType.Good); isRightPress = true; 
+              
                 break;
 
             case InteractableType.Working:
@@ -116,7 +117,7 @@ public class PlayerInteractor : MonoBehaviour
                 break;
         }
     }
-    
+
     private void DisableQTE()
     {
         qTE.patternDone -= SuccessfulHold;
@@ -145,8 +146,7 @@ public class PlayerInteractor : MonoBehaviour
                 break;
 
             case InteractableType.Damaged:
-                if (gamepad.RightShoulderDown && (!InteractableObj.HasInteracted) && !isLocked) { Interact(InteractionType.Good); isRightPress = true; }
-                if (gamepad.RightShoulderUp && IsHold && isRightPress) { UnHold(); isRightPress = false; }
+              Interact(InteractionType.Good); isRightPress = true;               
                 break;
 
             case InteractableType.Working:
@@ -156,7 +156,7 @@ public class PlayerInteractor : MonoBehaviour
                 break;
         }
     }
-
+    
     private void HumanState()
     {
         switch (InteractableObj.Type)
@@ -165,8 +165,8 @@ public class PlayerInteractor : MonoBehaviour
                 break;
 
             case InteractableType.Damaged:
-                if (gamepad.RightShoulderDown && (!InteractableObj.HasInteracted) && !isLocked) { Interact(InteractionType.Good); isRightPress = true; }
-                if (gamepad.RightShoulderUp && IsHold && isRightPress) { UnHold(); isRightPress = false; }
+               Interact(InteractionType.Good); isRightPress = true;
+             
                 break;
 
             case InteractableType.Working:
