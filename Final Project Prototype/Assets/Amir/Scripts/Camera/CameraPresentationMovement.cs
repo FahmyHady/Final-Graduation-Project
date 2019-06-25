@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using GamepadInput;
 public class CameraPresentationMovement : MonoBehaviour
 {
     [SerializeField] List<CinemachineVirtualCamera> virtualCameras;
     int currentIndex;
     int temp;
+    bool clicked;
     void Start()
     {
+
         currentIndex = 0;
         foreach (var item in virtualCameras)
         {
@@ -17,16 +20,19 @@ public class CameraPresentationMovement : MonoBehaviour
         virtualCameras[currentIndex].Priority = 10;
     }
 
-    public void NextCam() {
+    public void NextCam()
+    {
         temp = Mathf.Clamp(currentIndex + 1, 0, virtualCameras.Count - 1);
-        if (temp != currentIndex) {
+        if (temp != currentIndex)
+        {
             virtualCameras[temp].Priority = 10;
             virtualCameras[currentIndex].Priority = 0;
             currentIndex = temp;
         }
     }
 
-    public void PreCam() {
+    public void PreCam()
+    {
         temp = Mathf.Clamp(currentIndex - 1, 0, virtualCameras.Count - 1);
         if (temp != currentIndex)
         {
@@ -35,7 +41,8 @@ public class CameraPresentationMovement : MonoBehaviour
             currentIndex = temp;
         }
     }
-    public void GotoCam(int index) {
+    public void GotoCam(int index)
+    {
         temp = Mathf.Clamp(index, 0, virtualCameras.Count - 1);
         if (temp != currentIndex && temp == index)
         {
@@ -44,5 +51,32 @@ public class CameraPresentationMovement : MonoBehaviour
             currentIndex = temp;
         }
     }
+    private void Update()
+    {
+        AxisUsed();
 
+    }
+    void AxisUsed()
+    {
+        if (GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any).x != 0)
+        {
+            if (clicked == false)
+            {
+                if (GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any).x > 0)
+                {
+                    NextCam();
+                }
+                if (GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any).x < 0)
+                {
+                    PreCam();
+
+                }
+                clicked = true;
+            }
+        }
+        if (GamePad.GetAxis(GamePad.Axis.LeftStick, GamePad.Index.Any).x == 0)
+        {
+            clicked = false;
+        }
+    }
 }
