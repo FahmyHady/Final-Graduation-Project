@@ -44,7 +44,7 @@ public class TimeHoldinghandler : MonoBehaviour
 
     private void Run()
     {
-        timeRing.color = Color.green;
+        //timeRing.color = Color.green;
         IsStarted = true;
     }
 

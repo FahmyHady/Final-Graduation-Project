@@ -61,10 +61,11 @@ public class PreLevelManager : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
-        if (elapsedTime >= 1.0f)
+        if (elapsedTime >= 1.0f )
         {
             elapsedTime = 0.0f;
             startDelay--;
+            startDelay = Mathf.Max(startDelay, 0);
             startTimerText.text = startDelay.ToString();
             if (startDelay == 0)
             {
