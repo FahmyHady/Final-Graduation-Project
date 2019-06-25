@@ -7914,7 +7914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301896138}
   m_Layer: 0
-  m_Name: Shot7 GameSummary Items
+  m_Name: Shot7 Values Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11351,7 +11351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 58.1, y: -50}
+  m_AnchoredPosition: {x: 58.1, y: -46.1}
   m_SizeDelta: {x: 200, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422188233
@@ -11374,16 +11374,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Olympus Day Care is a 4-Player, Co-operative Party Game.
-
-
-    Set In ancient Greek Mythology.
-
-
-    It focuses on teamwork and understanding.
-
-
-    Encourages players to communicate for best results.'
+  m_text: "Basic Mechanics:\n\nChildren fixing broken items.\n\nWhen children fix
+    together the process is much faster. \n\nEach Child can destroy a special obstacle.\n\nThe
+    parent gives stamina & fixing boosts\n\nThe parent helps children in trouble\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6e1a7fe3dd3504bb1faac8d8a6f985, type: 2}
   m_sharedMaterial: {fileID: 21095350633471576, guid: bf6e1a7fe3dd3504bb1faac8d8a6f985,
@@ -11412,8 +11405,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 11.5
+  m_fontSizeBase: 11.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11453,12 +11446,12 @@ MonoBehaviour:
   m_margin: {x: -68.289185, y: -97.76166, z: 20.97702, w: -73.184074}
   m_textInfo:
     textComponent: {fileID: 422188233}
-    characterCount: 185
+    characterCount: 229
     spriteCount: 0
-    spaceCount: 29
-    wordCount: 27
+    spaceCount: 41
+    wordCount: 34
     linkCount: 0
-    lineCount: 10
+    lineCount: 13
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -28800,16 +28793,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Olympus Day Care is a 4-Player, Co-operative Party Game.
+  m_text: 'The game is value-oriented and while it has a fun theme, it has a more
+    serious goal.
 
 
-    Set In ancient Greek Mythology.
+
+    our core values:
 
 
-    It focuses on teamwork and understanding.
+
+    Teamwork
 
 
-    Encourages players to communicate for best results.'
+    Engagement
+
+
+    Empowering women in managerial roles'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6e1a7fe3dd3504bb1faac8d8a6f985, type: 2}
   m_sharedMaterial: {fileID: 21095350633471576, guid: bf6e1a7fe3dd3504bb1faac8d8a6f985,
@@ -28838,8 +28837,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28847,11 +28846,11 @@ MonoBehaviour:
   m_fontStyle: 1
   m_textAlignment: 514
   m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_characterSpacing: 1.48
+  m_wordSpacing: 17.49
+  m_lineSpacing: 15.21
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -26.82
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -28879,12 +28878,12 @@ MonoBehaviour:
   m_margin: {x: -68.289185, y: -97.76166, z: 20.97702, w: -73.184074}
   m_textInfo:
     textComponent: {fileID: 1043902169}
-    characterCount: 185
+    characterCount: 164
     spriteCount: 0
-    spaceCount: 29
+    spaceCount: 32
     wordCount: 27
     linkCount: 0
-    lineCount: 10
+    lineCount: 14
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -50024,7 +50023,7 @@ GameObject:
   - component: {fileID: 1857413421}
   - component: {fileID: 1857413422}
   m_Layer: 0
-  m_Name: Shot7 Summary vcam
+  m_Name: Shot7 Values vcam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
