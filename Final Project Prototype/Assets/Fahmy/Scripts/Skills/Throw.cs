@@ -77,7 +77,7 @@ public class Throw : MonoBehaviour
             objectToThrow.transform.LookAt(targetLocation);
             objectToThrow.root.position = points[i - 1];
         }
-        else { StartCoroutine(ThrowFinished()); }
+        else { StartCoroutine(ThrowFinished(ThrownChar)); }
     }
 
     private void ThrowBegan()
@@ -93,20 +93,20 @@ public class Throw : MonoBehaviour
         CalculateArc();
     }
 
-    private IEnumerator ThrowFinished()
+    private IEnumerator ThrowFinished(BaseCharacter character)
     {
         i = 0;
         beingThrown = false;
-        rb.detectCollisions = true;
+        character.rb.detectCollisions = true;
         if (transform.position == Cloud.myLocation)
         {
-            ThrownChar.animator.Play("Landing");
-            ThrownCharInfo.IsControllerInAir = beingThrown;
-            ThrownChar.myStateInfo.IsControllerDisable = true;
+            character.animator.Play("Landing");
+            character.myStateInfo.IsControllerInAir = beingThrown;
+            character.myStateInfo.IsControllerDisable = true;
             objectToThrow.transform.rotation = new Quaternion(0, objectToThrow.transform.rotation.y, 0, objectToThrow.transform.rotation.w);
 
-            yield return new WaitUntil(() => ThrownChar.animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
-            ThrownChar.myStateInfo.IsControllerDisable = beingThrown;
+            yield return new WaitUntil(() => character.animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
+            character.myStateInfo.IsControllerDisable = beingThrown;
         }
     }
 #endregion Methods

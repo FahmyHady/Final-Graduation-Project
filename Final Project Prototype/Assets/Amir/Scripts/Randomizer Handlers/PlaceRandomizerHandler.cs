@@ -30,7 +30,7 @@ public class PlaceRandomizerHandler : MonoBehaviour, IRandomize
         yield return new WaitForSeconds(delay);
         var obj = Instantiate(@object);
         Ranomize(ref obj);
-        if (obj == null || obj?.GetComponent<RandomPlaceObj>().Place == null)
+        if (obj != null || obj .GetComponent<RandomPlaceObj>().Place == null)
         {
             Destroy(obj);
         }

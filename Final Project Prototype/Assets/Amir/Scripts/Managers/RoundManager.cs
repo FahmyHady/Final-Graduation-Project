@@ -88,9 +88,8 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
-        placeManager.StartRandom();
-        List<PlayerInfo> players = GameManager.Instance.Players;
         clock.StartClock();
+        List<PlayerInfo> players = GameManager.Instance.Players;
         interactablesNum = GameManager.Instance.MaxInteractableFixed;
         parent.Player = players[0];
         parent.CurrentStamina = parent.MaxStamina;
@@ -99,6 +98,7 @@ public class RoundManager : MonoBehaviour
             children[i].Player = players[i + 1];
             children[i].CurrentStamina = children[i].MaxStamina;
         }
+        placeManager.StartRandom();
     }
 
     private void Update()

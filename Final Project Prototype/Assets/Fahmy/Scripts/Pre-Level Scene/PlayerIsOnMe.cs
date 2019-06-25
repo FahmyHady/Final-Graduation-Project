@@ -4,6 +4,7 @@ public class PlayerIsOnMe : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        
         PreLevelManager.Manager.ReadyPlayerNum += 1;
         AudioManager.Play(AudioManager.AudioItems.Teleport, "TeleportEnter");
     }

@@ -4943,7 +4943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.26666668}
+  m_Color: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0.7764706}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7812,6 +7812,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8211518636074492560}
     m_Modifications:
+    - target: {fileID: 8211518635470112032, guid: 30e1341674a30f84da38719b9392e14c,
+        type: 3}
+      propertyPath: m_Name
+      value: zeus_gate
+      objectReference: {fileID: 0}
     - target: {fileID: 8211518635470346496, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7866,11 +7871,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8211518635470112032, guid: 30e1341674a30f84da38719b9392e14c,
-        type: 3}
-      propertyPath: m_Name
-      value: zeus_gate
       objectReference: {fileID: 0}
     - target: {fileID: 8075283203148939107, guid: 30e1341674a30f84da38719b9392e14c,
         type: 3}

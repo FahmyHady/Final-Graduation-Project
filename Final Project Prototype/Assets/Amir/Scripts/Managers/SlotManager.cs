@@ -15,7 +15,7 @@ public class SlotManager : MonoBehaviour
     [SerializeField] private Button readyBtn;
     [SerializeField] private Text readyText;
     [SerializeField] private GamePad.Button rejectBtnKey;
-    [SerializeField] UINavigationHandler iNavigationHandler;
+    [SerializeField] private UINavigationHandler iNavigationHandler;
     private Queue<SlotHandler> slots;
     #endregion Fields
 
@@ -97,6 +97,7 @@ public class SlotManager : MonoBehaviour
         readyBtn.enabled = false;
         readyText.color = Color.black;
     }
+
     private void Update()
     {
         if (slots.Count != 0)
@@ -121,7 +122,8 @@ public class SlotManager : MonoBehaviour
                 iNavigationHandler.Submit();
             }
         }
-        else if (slots.Count == 4) {
+        else if (slots.Count == 4)
+        {
             if (GamePad.GetButtonDown(RejectBtnKey, GamePad.Index.Any))
             {
                 iNavigationHandler.Back();
