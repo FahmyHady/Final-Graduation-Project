@@ -41,7 +41,16 @@ public class PresentationInteractor : MonoBehaviour
     #endregion Properties
 
     #region Methods
-
+    private void OnDisable()
+    {
+        if (CanInteract)
+            UnHold();
+        CanInteract = false;
+        InteractableObj = null;
+        DisableQTE();
+        holdinghandler = null;
+        qTE = null;
+    }
     public void Enter(PresentationInteractable act)
     {
         InteractableObj = act;
@@ -81,7 +90,6 @@ public class PresentationInteractor : MonoBehaviour
                 break;
 
             case InteractableType.Damaged:
-                Debug.Log("hi");
                Interact(InteractionType.Good); isRightPress = true; 
               
                 break;

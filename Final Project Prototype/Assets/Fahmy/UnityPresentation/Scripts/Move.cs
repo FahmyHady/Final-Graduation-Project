@@ -6,10 +6,13 @@ public class Move : MonoBehaviour
 {
     Child me;
     bool notInRange;
-   public float speed;
+    public float speed;
+    public bool useSkill;
+    bool skillUsed;
     private void OnEnable()
     {
         notInRange = true;
+        skillUsed = false;
 
     }
     void Start()
@@ -20,12 +23,18 @@ public class Move : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         notInRange = false;
+        if (useSkill && !skillUsed)
+        {
+            me.SkillOne("animation");
+            skillUsed = true;
+            notInRange = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         notInRange = true;
+
     }
-    // Update is called once per frame
     void Update()
     {
         if (notInRange)

@@ -58,8 +58,7 @@ public class PresentationInteractable : MonoBehaviour
     {
         fixedEvent.Raise();
         AudioManager.Play(AudioManager.AudioItems.Interactable, "Fixed");
-
-        Destroy(this.transform.gameObject, destroyDelay);
+        Destroy(this.transform.root.gameObject, destroyDelay);
     }
 
     public void HoldPlace()

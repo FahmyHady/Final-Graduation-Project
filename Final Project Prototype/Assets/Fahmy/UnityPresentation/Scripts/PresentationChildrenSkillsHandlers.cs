@@ -22,20 +22,16 @@ public class PresentationChildrenSkillsHandlers : MonoBehaviour
     {
         child = GetComponentInParent<Child>();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        UseSkill(1);
-
-    }
+ 
    
     private void UseSkill(int WhichSkill)
     {
         switch (WhichSkill)
         {
-            case 1: child.SkillOne("animation"); break;
+            case 1:  child.SkillOne("animation"); break;
             case 2: child.SkillTwo(); break;
             case 3: child.SkillThree(); break;
-            case 4:child.SkillOne("skill");break;
+            case 4: child.SkillOne("skill");break;
         }
     }
     #endregion Methods

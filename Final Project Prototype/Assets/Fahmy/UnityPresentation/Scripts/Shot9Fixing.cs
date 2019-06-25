@@ -14,18 +14,41 @@ public class Shot9Fixing : MonoBehaviour
     bool created;
     void Awake()
     {
-        player1StartPos = player1.transform.position;
-        player2StartPos = player2.transform.position;
-        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
+        if (player1)
+        {
+            player1StartPos = player1.transform.position;
+
+        }
+        if (player2)
+        {
+
+            player2StartPos = player2.transform.position;
+        }
         created = true;
     }
     private void OnEnable()
     {
-        player1.transform.position = player1StartPos;
-        player2.transform.position = player2StartPos;
-        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
+        if (player1)
+        {
+            player1.transform.position = player1StartPos;
+
+        }
+        if (player2)
+        {
+
+            player2.transform.position = player2StartPos;
+        }
+        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation );
         created = true;
 
+    }
+    private void OnDisable()
+    {
+        if (item)
+        {
+            Destroy(item);
+
+        }
     }
     void Update()
     {
@@ -36,7 +59,6 @@ public class Shot9Fixing : MonoBehaviour
             {
                 created = false;
                 gameObject.SetActive(false);
-
                 gameObject.SetActive(true);
             }
         }
