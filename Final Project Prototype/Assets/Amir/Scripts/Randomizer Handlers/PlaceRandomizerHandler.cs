@@ -57,8 +57,8 @@ public class PlaceRandomizerHandler : MonoBehaviour, IRandomize
             usesIndex.Remove(value);
     }
     private Transform GetLocation()
-    { 
-        
+    {
+        index = -1;
         if (this.transform.childCount > 0 )
         {
             var li = this.transform.GetComponentsInChildren<RandomPlaceIndecator>().Where(i => i.IsFree).Select(i => i).ToList();
@@ -71,7 +71,7 @@ public class PlaceRandomizerHandler : MonoBehaviour, IRandomize
             //{
             //    index = (Mathf.FloorToInt((Random.Range(0, this.transform.childCount - 1) + rand.Next(0, this.transform.childCount - 1)) * (Random.value + rand.Next()))) % (this.transform.childCount);
             //} while ((hasManyUses) && !(this.transform.GetChild(index).GetComponent<RandomPlaceIndecator>()).IsFree);
-            return (li != null && li?.Count > 0) ? li[index].transform : null;
+            return (li != null && li?.Count > 0 && index != -1) ? li[index].transform : null;
         }
         return null;
     }

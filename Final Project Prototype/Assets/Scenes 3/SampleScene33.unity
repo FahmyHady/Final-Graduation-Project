@@ -13575,8 +13575,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.455322, y: 0.8654947, z: 11.9}
-  m_Center: {x: -24.122576, y: 2.1527474, z: -1.499974}
+  m_Size: {x: 13.455324, y: 0.7939749, z: 11.9}
+  m_Center: {x: -24.122633, y: 2.1169875, z: -1.4999639}
 --- !u!65 &561803819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24621,6 +24621,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625950978, guid: 3381b3bfc0ea79243bb4ce739710fffc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625950978, guid: 3381b3bfc0ea79243bb4ce739710fffc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137630714, guid: 3381b3bfc0ea79243bb4ce739710fffc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3381b3bfc0ea79243bb4ce739710fffc, type: 3}
@@ -39620,7 +39632,7 @@ MonoBehaviour:
   eventStart: {fileID: 11400000, guid: ab4113ba550e505419eab4956a17cc6e, type: 2}
   curseTime: 5
   isOnceOnly: 0
-  weight: 7
+  weight: 15
 --- !u!4 &1593116977
 Transform:
   m_ObjectHideFlags: 0
@@ -42888,6 +42900,7 @@ GameObject:
   - component: {fileID: 1734855858}
   - component: {fileID: 1734855860}
   - component: {fileID: 1734855861}
+  - component: {fileID: 1734855862}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -42960,7 +42973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShakeAmplitude: 1.2
-  ShakeDuration: 0.3
+  ShakeDuration: 10
   ShakeFrequency: 2
   VirtualCamera: {fileID: 1734855858}
 --- !u!114 &1734855861
@@ -42979,6 +42992,35 @@ MonoBehaviour:
   m_Damping: 1
   m_MinFOV: 3
   m_MaxFOV: 60
+--- !u!114 &1734855862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734855857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e97976375e4ba14eaaacccdd99bd519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: ab4113ba550e505419eab4956a17cc6e, type: 2}
+  handle:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1734855860}
+        m_MethodName: StartShake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1737450540
 GameObject:
   m_ObjectHideFlags: 0
@@ -52902,6 +52944,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5092096427225503319}
     m_Modifications:
+    - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
+        type: 3}
+      propertyPath: m_Name
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6761969565519167524, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_Name
@@ -52961,16 +53013,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_Name
-      value: Interactable
-      objectReference: {fileID: 0}
-    - target: {fileID: 3659776047594603388, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4002118671458073730, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
