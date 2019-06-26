@@ -4,11 +4,10 @@ using UnityEngine;
 using Cinemachine;
 public class CameraDisableItems : MonoBehaviour
 {
-    bool isInactive;
+   internal bool isInactive;
     CinemachineVirtualCamera me;
     public GameObject shotItems;
-    public bool NoDisableObject;
-    // Start is called before the first frame update
+    public CameraPresentationMovement mycameras;
     void Start()
     {
         me = GetComponent<CinemachineVirtualCamera>();
@@ -18,10 +17,13 @@ public class CameraDisableItems : MonoBehaviour
     {
         isInactive = true;
         yield return new WaitForSeconds(3);
-        if (isInactive && !NoDisableObject)
+        if (isInactive)
         {
+            if (shotItems != mycameras.NextCamM.GetComponent<CameraDisableItems>().shotItems)
+            {
+                shotItems.SetActive(false);
 
-            shotItems.SetActive(false);
+            }
         }
     }
     void Update()

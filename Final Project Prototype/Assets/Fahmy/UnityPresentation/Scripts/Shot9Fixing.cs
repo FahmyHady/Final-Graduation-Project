@@ -13,6 +13,7 @@ public class Shot9Fixing : MonoBehaviour
     public Child player1;
     public Child player2;
     public PresentationParent player3;
+    public CameraDisableItems myCam;
     bool created;
     public bool throwing;
     void Awake()
@@ -71,6 +72,7 @@ public class Shot9Fixing : MonoBehaviour
             {
                 created = false;
                 Invoke("waitToReEnable", 15);
+
             }
             if (!item && !throwing)
             {
@@ -83,7 +85,16 @@ public class Shot9Fixing : MonoBehaviour
 
     void waitToReEnable()
     {
-        gameObject.SetActive(false);
-        gameObject.SetActive(true);
+        if (!myCam.isInactive)
+        {
+            gameObject.SetActive(false);
+            gameObject.SetActive(true);
+
+        }
+        else
+        {
+            gameObject.SetActive(false);
+
+        }
     }
 }

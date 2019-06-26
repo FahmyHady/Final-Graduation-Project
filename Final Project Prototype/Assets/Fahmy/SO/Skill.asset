@@ -17,5 +17,5 @@ MonoBehaviour:
     - ByeByeThrown
     - FallInCloud
     m_values:
-    - {fileID: 8300000, guid: b46950266f7a6244b9d14e202a14a52a, type: 3}
+    - {fileID: 8300000, guid: 34534c59df4ba1f4bacbe0ae39b4ee80, type: 3}
     - {fileID: 8300000, guid: 1c87563ddf463be49ba460e3119d7b40, type: 3}
