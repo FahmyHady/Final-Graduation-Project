@@ -7,6 +7,7 @@ public class CameraDisableItems : MonoBehaviour
     bool isInactive;
     CinemachineVirtualCamera me;
     public GameObject shotItems;
+    public bool NoDisableObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class CameraDisableItems : MonoBehaviour
     {
         isInactive = true;
         yield return new WaitForSeconds(3);
-        if (isInactive)
+        if (isInactive && !NoDisableObject)
         {
 
             shotItems.SetActive(false);
