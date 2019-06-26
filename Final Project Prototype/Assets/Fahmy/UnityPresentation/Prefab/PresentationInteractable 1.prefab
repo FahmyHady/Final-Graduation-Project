@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 6266983098003291808}
   - component: {fileID: 8298978511611708504}
   m_Layer: 11
-  m_Name: PresentationInteractable
+  m_Name: PresentationInteractable 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ Transform:
   m_GameObject: {fileID: 1067888201785112632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 1.01}
-  m_LocalScale: {x: 1.2766, y: 1.2766, z: 1.2766}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 7047169402225212261}
   - {fileID: 1067888201455089242}
@@ -551,8 +551,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.87
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.08
+  m_Center: {x: -1.99, y: 0.58, z: 2.43}
 --- !u!114 &1067888201785112615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +714,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7047169402225212256}
-  m_Mesh: {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c1ac6f0ed8c644a4eb49aaa51e75bef3, type: 3}
 --- !u!23 &7047169402225212263
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -766,10 +766,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   filter: {fileID: 7047169402225212262}
   meshes:
-  - {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
-  - {fileID: 4300000, guid: 8cf13063ed5068647923d83de72a93d3, type: 3}
-  - {fileID: 4300000, guid: adbe86dbe41ed214faff97b1aea299f5, type: 3}
-  - {fileID: 4300000, guid: adbe86dbe41ed214faff97b1aea299f5, type: 3}
+  - {fileID: 4300000, guid: c1ac6f0ed8c644a4eb49aaa51e75bef3, type: 3}
+  - {fileID: 4300000, guid: c1ac6f0ed8c644a4eb49aaa51e75bef3, type: 3}
+  - {fileID: 4300000, guid: 6465cb6680874064696e36a3a793785d, type: 3}
+  - {fileID: 4300000, guid: 6465cb6680874064696e36a3a793785d, type: 3}
   prefab: {fileID: 833629924237510618}
 --- !u!1001 &833629924237607290
 PrefabInstance:

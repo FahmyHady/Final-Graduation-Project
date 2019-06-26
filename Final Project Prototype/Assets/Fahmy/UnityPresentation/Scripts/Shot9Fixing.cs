@@ -6,12 +6,15 @@ public class Shot9Fixing : MonoBehaviour
 {
     Vector3 player1StartPos;
     Vector3 player2StartPos;
+    Vector3 player3StartPos;
     GameObject item;
     public GameObject itemPrefab;
     public Transform itemSpawnPoint;
     public Child player1;
     public Child player2;
+    public PresentationParent player3;
     bool created;
+    public bool throwing;
     void Awake()
     {
         if (player1)
@@ -23,6 +26,11 @@ public class Shot9Fixing : MonoBehaviour
         {
 
             player2StartPos = player2.transform.position;
+        }
+        if (player3)
+        {
+
+            player3StartPos = player3.transform.position;
         }
         created = true;
     }
@@ -38,7 +46,12 @@ public class Shot9Fixing : MonoBehaviour
 
             player2.transform.position = player2StartPos;
         }
-        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation );
+        if (player3)
+        {
+
+            player3.transform.position = player3StartPos;
+        }
+        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
         created = true;
 
     }
@@ -54,13 +67,23 @@ public class Shot9Fixing : MonoBehaviour
     {
         if (created)
         {
-
-            if (!item)
+            if (throwing)
+            {
+                created = false;
+                Invoke("waitToReEnable", 15);
+            }
+            if (!item && !throwing)
             {
                 created = false;
                 gameObject.SetActive(false);
                 gameObject.SetActive(true);
             }
         }
+    }
+
+    void waitToReEnable()
+    {
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 }

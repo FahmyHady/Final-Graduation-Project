@@ -47,7 +47,6 @@ public class PresentationInteractor : MonoBehaviour
             UnHold();
         CanInteract = false;
         InteractableObj = null;
-        DisableQTE();
         holdinghandler = null;
         qTE = null;
     }
@@ -90,6 +89,7 @@ public class PresentationInteractor : MonoBehaviour
                 break;
 
             case InteractableType.Damaged:
+                
                Interact(InteractionType.Good); isRightPress = true; 
               
                 break;
