@@ -116,7 +116,7 @@ public class PlayerInteractor : MonoBehaviour
                 break;
         }
     }
-
+    
     private void DisableQTE()
     {
         qTE.patternDone -= SuccessfulHold;
