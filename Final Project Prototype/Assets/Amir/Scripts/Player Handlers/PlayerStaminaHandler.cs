@@ -3,7 +3,7 @@
 public class PlayerStaminaHandler : MonoBehaviour
 {
     #region Fields
-    private PlayerStateInfo info;
+   [SerializeField] private PlayerStateInfo info;
     private float stamina;
     #endregion Fields
 

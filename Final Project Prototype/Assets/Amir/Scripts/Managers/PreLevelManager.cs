@@ -16,6 +16,7 @@ public class PreLevelManager : MonoBehaviour
     private static PreLevelManager manager;
     [SerializeField] private Text startTimerText;
     int value;
+    bool isStarted;
     #endregion Fields
 
     #region Properties
@@ -27,6 +28,7 @@ public class PreLevelManager : MonoBehaviour
     #region Methods
     private void Awake()
     {
+        isStarted = false;
         if (Manager == null)
             manager = this;
     }
@@ -67,8 +69,9 @@ public class PreLevelManager : MonoBehaviour
             startDelay--;
             startDelay = Mathf.Max(startDelay, 0);
             startTimerText.text = startDelay.ToString();
-            if (startDelay == 0)
+            if (startDelay == 0 && !isStarted)
             {
+                isStarted = true;
                 GameManager.Instance.Players = roleHandler.Players;
                 GameManager.Instance.StartRound();
             }

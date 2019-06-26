@@ -82,7 +82,8 @@ public class GameManager : MonoBehaviour
         vs.Add(hTime);
         return vs;
     }
-  
+    public void Exit()
+    { Application.Quit(); }
     #endregion Methods
  
      
