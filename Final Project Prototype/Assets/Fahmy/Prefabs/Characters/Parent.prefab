@@ -4762,7 +4762,7 @@ ParticleSystem:
 --- !u!199 &145410921
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9318,7 +9318,7 @@ ParticleSystem:
 --- !u!199 &145410925
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13854,7 +13854,7 @@ ParticleSystem:
 --- !u!199 &145410927
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -14194,6 +14194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bdd6e7ce6c237b4faea9b41fa9950cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 6112385314709315918}
 --- !u!136 &6744501817515852257
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14510,6 +14511,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.12148815
+      objectReference: {fileID: 0}
+    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1339172
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_Controller
       value: 
@@ -14521,14 +14530,6 @@ PrefabInstance:
     - target: {fileID: 13700000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.12148815
-      objectReference: {fileID: 0}
-    - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.1339172
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
