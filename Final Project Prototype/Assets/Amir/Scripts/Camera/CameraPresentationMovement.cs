@@ -5,10 +5,11 @@ using Cinemachine;
 using GamepadInput;
 public class CameraPresentationMovement : MonoBehaviour
 {
-    [SerializeField] List<CinemachineVirtualCamera> virtualCameras;
-    int currentIndex;
+    public List<CinemachineVirtualCamera> virtualCameras;
+    public int currentIndex;
     int temp;
     bool clicked;
+  public  CinemachineVirtualCamera NextCamM { get => virtualCameras[currentIndex ]; }
     void Start()
     {
 
