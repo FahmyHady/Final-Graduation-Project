@@ -26,7 +26,10 @@ public class CameraShakeCM : MonoBehaviour
     private void Start()
     {
         if (VirtualCamera != null)
+        {
             virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
+            virtualCameraNoise.m_AmplitudeGain = 0f;
+        }
     }
 
     private void UpdateParSec()
