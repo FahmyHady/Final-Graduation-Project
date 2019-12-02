@@ -15,7 +15,6 @@ public class Throw : MonoBehaviour
     private Rigidbody rb;
     private Vector3 Tangent;
     [SerializeField]
-    [Range(1, 20)]
     private float tangentHeight;
     private Vector3 targetLocation;
     private BaseCharacter ThrownChar;
@@ -60,7 +59,7 @@ public class Throw : MonoBehaviour
     private void CalculateArc()
     {
         Tangent.x = (((targetLocation.x - objectToThrow.position.x)) / 2) + objectToThrow.position.x;
-        Tangent.y = tangentHeight;
+        Tangent.y = objectToThrow.position.y+ tangentHeight;
         Tangent.z = ((targetLocation.z - objectToThrow.position.z) / 2) + objectToThrow.position.z;
         numberOfDivisions = (int)(rateOfThrow * 60);
         points = CalculatePoints(objectToThrow.position, Tangent, Tangent, targetLocation, numberOfDivisions);
@@ -88,6 +87,7 @@ public class Throw : MonoBehaviour
         rb.detectCollisions = false;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
         beingThrown = true;
         ThrownCharInfo.IsControllerInAir = beingThrown;
         CalculateArc();
@@ -98,6 +98,8 @@ public class Throw : MonoBehaviour
         i = 0;
         beingThrown = false;
         character.rb.detectCollisions = true;
+        rb.isKinematic = false;
+
         if (transform.position == Cloud.myLocation)
         {
             character.animator.Play("Landing");

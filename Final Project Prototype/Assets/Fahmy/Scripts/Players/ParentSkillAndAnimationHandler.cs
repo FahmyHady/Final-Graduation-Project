@@ -18,8 +18,8 @@ public class ParentSkillAndAnimationHandler : MonoBehaviour
     {
         gamepad = parent.myStateInfo.Controller;
         if (gamepad.XDown) { UseSkill(1); }
-        if (gamepad.BUp) { parent.ResetAllRegenOrFixRates(true); parent.myStateInfo.IsControllerDisable = false; }
-        else if (gamepad.B) { UseSkill(2); parent.myStateInfo.IsControllerDisable = true; }
+        //if (gamepad.BUp) { parent.ResetAllRegenOrFixRates(true); parent.myStateInfo.IsControllerDisable = false; }
+       // else if (gamepad.B) { UseSkill(2); parent.myStateInfo.IsControllerDisable = true; }
         if (gamepad.YUp) { parent.ResetAllRegenOrFixRates(false); parent.myStateInfo.IsControllerDisable = false; }
         else if (gamepad.Y) { UseSkill(3); parent.myStateInfo.IsControllerDisable = true; }
     }

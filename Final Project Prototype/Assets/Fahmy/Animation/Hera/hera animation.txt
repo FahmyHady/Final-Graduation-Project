@@ -1,7 +1,0 @@
-Hera            
-normal           idel
-normal           quick walk
-earthquake         dizzy
-Volcano             burring
-Specific power        throwing
-Specific power       giving power to others

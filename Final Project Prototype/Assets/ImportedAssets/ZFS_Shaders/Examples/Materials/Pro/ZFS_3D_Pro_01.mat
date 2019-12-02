@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ZFS_3D_Pro_01
   m_Shader: {fileID: 4800000, guid: c9e994a922c6d9b43bfe84b1c9c9593c, type: 3}
-  m_ShaderKeywords: _EDGE_DETECTION_FAKE_ON _EDGE_DETECTION_ON _FRESNEL_ON _GRADIENT_OR_SOLID_COLOR_ON
-    _MAKE_SAME_AS_FRESNEL_ON _SOFT_TEXTURE_ON
+  m_ShaderKeywords: _EDGE_DETECTION_FAKE_ON _EDGE_DETECTION_ON _FRESNEL_ON _MAKE_SAME_AS_FRESNEL_ON
+    _SOFT_TEXTURE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -53,8 +53,8 @@ Material:
     - _Edge_Detection_Fake: 1
     - _Fresnel: 1
     - _Fresnel_Exponent: 1
-    - _Gradient_Or_Solid_Color: 1
-    - _Intensity: 1
+    - _Gradient_Or_Solid_Color: 0
+    - _Intensity: 0.5
     - _Make_Same_As_Fresnel: 1
     - _Pan_Speed: 2
     - _Soft_Texture: 0.6980392

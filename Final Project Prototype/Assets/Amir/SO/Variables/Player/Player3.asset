@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253963d7ebee9b94c8ca6b90b1055204, type: 3}
   m_Name: Player3
   m_EditorClassIdentifier: 
-  controller: 5
-  outline: {r: 0, g: 0.15520048, b: 1, a: 1}
+  controller: 0
+  outline: {r: 0.7700333, g: 0.4764151, b: 1, a: 1}

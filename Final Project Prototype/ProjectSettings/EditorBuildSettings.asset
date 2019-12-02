@@ -5,25 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Amir/Scenes/Start Setup/MainMenu.unity
     guid: bd80b3e94b33ca749bb394ba4afc7520
   - enabled: 1
     path: Assets/Fahmy/Scenes/Pre-Level Character Pick.unity
     guid: dbbd2a5b342534c4da9b0ce3db635602
-  - enabled: 0
-    path: Assets/Amir/Scenes/GamePlaylevel.unity
-    guid: 5cb135667c6a598449d9e030bcf62366
   - enabled: 1
     path: Assets/Scenes 3/SampleScene33.unity
     guid: 02caaa9784ddb384a8b61ee9f70cd64b
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: d75bbbfb3baa17c4f96bac3f329d5d83
   - enabled: 1
-    path: Assets/Amir/Scenes/Start Setup/Winlevel.unity
-    guid: d5c259ff5e378ff498b4e042abe92bec
+    path: Assets/Scenes/tutorial.unity
+    guid: 8aa3df92ad5ad1447b90bff9dc46e6d7
+  - enabled: 0
+    path: Assets/Fahmy/UnityPresentation/Unity Presentation.unity
+    guid: 58b34535d3b3657418872fbe25188025
   m_configObjects: {}

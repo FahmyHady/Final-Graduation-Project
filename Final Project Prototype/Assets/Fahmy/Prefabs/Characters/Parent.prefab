@@ -4762,7 +4762,7 @@ ParticleSystem:
 --- !u!199 &145410921
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9318,7 +9318,7 @@ ParticleSystem:
 --- !u!199 &145410925
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9695,7 +9695,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9748,7 +9748,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9801,7 +9801,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -9854,7 +9854,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -13854,7 +13854,7 @@ ParticleSystem:
 --- !u!199 &145410927
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13923,7 +13923,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1477506120}
   - component: {fileID: 1477506121}
-  - component: {fileID: 1477506122}
   m_Layer: 9
   m_Name: Cursehandler
   m_TagString: Untagged
@@ -13960,19 +13959,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   confuseEff: {fileID: 159706025}
   info: {fileID: 0}
---- !u!114 &1477506122
-MonoBehaviour:
+--- !u!135 &313807279
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477506119}
+  m_GameObject: {fileID: 339549511887505307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12eae249c49d0fb47a369fed7f8ce352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  event: {fileID: 11400000, guid: 74d70c98f2e71094b870e0f27eea4939, type: 2}
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 1.18, z: 0}
 --- !u!1 &2297328740936686894
 GameObject:
   m_ObjectHideFlags: 0
@@ -14003,6 +14002,19 @@ Transform:
   m_Father: {fileID: 5087293743867361346}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -53.643, y: 49.774002, z: -33.225002}
+--- !u!135 &1334812761
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160821268488390332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 1.18, z: 0}
 --- !u!114 &7913916938200813876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14074,7 +14086,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &6112385314709315918
@@ -14157,9 +14169,9 @@ MonoBehaviour:
   coolDownOne: 0
   coolDownthree: 0
   coolDownTwo: 0
-  skillOneStaminaCost: 30
-  skillTwoStaminaCost: 10
-  skillThreeStaminaCost: 10
+  skillOneStaminaCost: 0
+  skillTwoStaminaCost: 0
+  skillThreeStaminaCost: 0
   speed: 500
   slowResistance: 1
   maxSpeed: 2
@@ -14293,6 +14305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZFS_3D_Pro_Root_07
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: f498fa58f05afa44fb105281165e94fc, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f498fa58f05afa44fb105281165e94fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14373,6 +14389,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 73c68311f2eeee84ca1ab9e359a433a6, type: 3}
       propertyPath: m_Name
       value: ZFS_3D_Pro_Root_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 73c68311f2eeee84ca1ab9e359a433a6, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 73c68311f2eeee84ca1ab9e359a433a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14511,6 +14531,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 142e4f3c9cccfb64e9bf52a29d27b653, type: 2}
+    - target: {fileID: 9500000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.12148815
@@ -14518,18 +14546,6 @@ PrefabInstance:
     - target: {fileID: 400078, guid: 0b999416787045249b46e176e99d61e4, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.1339172
-      objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 142e4f3c9cccfb64e9bf52a29d27b653, type: 2}
-    - target: {fileID: 13700000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: 0b999416787045249b46e176e99d61e4, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b999416787045249b46e176e99d61e4, type: 3}

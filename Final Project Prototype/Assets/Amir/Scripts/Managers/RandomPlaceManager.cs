@@ -8,12 +8,11 @@ public class RandomPlaceManager : MonoBehaviour
     [SerializeField] float delay;
     GameObject obj;
     int value;
-    void Start()
+
+    public void StartRandom()
     {
-        
-    }
-    public void StartRandom() {
-        foreach (PlaceRandom place in places) {
+        foreach (PlaceRandom place in places)
+        {
             if (place.placeObjs?.Count != 0)
             {
                 while (true)
@@ -26,12 +25,17 @@ public class RandomPlaceManager : MonoBehaviour
                         Destroy(obj);
                         break;
                     }
-                    obj.GetComponentInChildren<InteractableIndicator>()?.SetCanvas(RoundManager.Instance.MainCanvas);
+                    else
+                    {
+
+                        obj.GetComponentInChildren<InteractableIndicator>()?.SetCanvas(RoundManager.Instance.MainCanvas);
+                    }
                 }
             }
         }
     }
-    public void RandPlace(PlaceRandomizerHandler placeRandom) {
+    public void RandPlace(PlaceRandomizerHandler placeRandom)
+    {
         var placeRand = places.Find(i => i.place = placeRandom);
         if (placeRand.Equals(default(PlaceRandom)))
             return;
@@ -42,11 +46,12 @@ public class RandomPlaceManager : MonoBehaviour
     }
 }
 [System.Serializable]
-public struct PlaceRandom {
+public struct PlaceRandom
+{
     [Header("Place Random")]
     public PlaceRandomizerHandler place;
     public int minWeight;
     public int maxWeight;
     public List<GameObject> placeObjs;
-    
+
 }

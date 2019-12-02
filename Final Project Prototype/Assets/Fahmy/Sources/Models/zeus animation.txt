@@ -1,8 +1,0 @@
-Character	animation
-Zeus                
-normal              Idle
-normal              Quick walk
-earthquake           Dizzy
-Volcano             Burring              
-Specific power       Fixing mood
-Specific power	  Make electric shock

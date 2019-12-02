@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Player4
   m_EditorClassIdentifier: 
   controller: 0
-  outline: {r: 0.93819284, g: 1, b: 0, a: 1}
+  outline: {r: 0.14618193, g: 0.6886792, b: 0.23134136, a: 1}

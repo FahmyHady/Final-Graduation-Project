@@ -169,18 +169,22 @@ public class Parent : BaseCharacter
     {
         if (other.gameObject.layer == 9)
         {
-            playersToAid.Add(other, other.gameObject.GetComponentInParent<PlayerStateInfo>());
-            originalFixRate = playersToAid[other].FixRate;
-            originalRegenRate = playersToAid[other].RegenRate;
-            if (skillTwoUsed  )
+            if (!playersToAid.ContainsKey(other))
             {
-                CalculateFinalRegenRate();
-                ApplyFinalRegenRate();
-            }
-            else if(skillThreeUsed)
-            {
-                CalculateFinalFixRate();
-                ApplyFinalFixRate();
+                playersToAid.Add(other, other.gameObject.GetComponentInParent<PlayerStateInfo>());
+                originalFixRate = playersToAid[other].FixRate;
+                originalRegenRate = playersToAid[other].RegenRate;
+
+                if (skillTwoUsed)
+                {
+                    CalculateFinalRegenRate();
+                    ApplyFinalRegenRate();
+                }
+                else if (skillThreeUsed)
+                {
+                    CalculateFinalFixRate();
+                    ApplyFinalFixRate();
+                }
             }
         }
     }

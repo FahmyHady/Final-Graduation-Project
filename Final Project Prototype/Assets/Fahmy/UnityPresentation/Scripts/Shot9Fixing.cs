@@ -5,13 +5,11 @@ using UnityEngine;
 public class Shot9Fixing : MonoBehaviour
 {
     Vector3 player1StartPos;
-    Vector3 player2StartPos;
     Vector3 player3StartPos;
     GameObject item;
     public GameObject itemPrefab;
     public Transform itemSpawnPoint;
     public Child player1;
-    public Child player2;
     public PresentationParent player3;
     public CameraDisableItems myCam;
     bool created;
@@ -23,11 +21,7 @@ public class Shot9Fixing : MonoBehaviour
             player1StartPos = player1.transform.position;
 
         }
-        if (player2)
-        {
-
-            player2StartPos = player2.transform.position;
-        }
+      
         if (player3)
         {
 
@@ -42,19 +36,14 @@ public class Shot9Fixing : MonoBehaviour
             player1.transform.position = player1StartPos;
 
         }
-        if (player2)
-        {
-
-            player2.transform.position = player2StartPos;
-        }
+       
         if (player3)
         {
 
             player3.transform.position = player3StartPos;
         }
-        item = Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
+        Instantiate(itemPrefab, itemSpawnPoint.position, itemSpawnPoint.rotation);
         created = true;
-
     }
     private void OnDisable()
     {

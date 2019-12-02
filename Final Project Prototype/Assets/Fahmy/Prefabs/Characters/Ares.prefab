@@ -4771,7 +4771,7 @@ ParticleSystem:
 --- !u!199 &747247471
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9490,7 +9490,7 @@ ParticleSystem:
 --- !u!199 &800211818
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9580,7 +9580,6 @@ GameObject:
   - component: {fileID: 848000449}
   - component: {fileID: 848000452}
   - component: {fileID: 848000451}
-  - component: {fileID: 848000450}
   m_Layer: 9
   m_Name: Cursehandler
   m_TagString: Untagged
@@ -9633,18 +9632,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   confuseEff: {fileID: 205296675}
   info: {fileID: 0}
---- !u!114 &848000450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848000448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7c8b9861834834bb9c7852b41b9f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &911315073
 GameObject:
   m_ObjectHideFlags: 0
@@ -14210,7 +14197,7 @@ ParticleSystem:
 --- !u!199 &1471363230
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -18909,7 +18896,7 @@ ParticleSystem:
 --- !u!199 &1593760280
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23465,7 +23452,7 @@ ParticleSystem:
 --- !u!199 &1685473341
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -23948,11 +23935,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 063ab67ec45366d4791192046e6f9a10, type: 2}
-    - target: {fileID: 13700000, guid: e74dc3d85568ccb4eb0c82ffb26649f1, type: 3}
+    - target: {fileID: 13700002, guid: e74dc3d85568ccb4eb0c82ffb26649f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9eba8f12406d6e14b87ea95627756400, type: 2}
-    - target: {fileID: 13700002, guid: e74dc3d85568ccb4eb0c82ffb26649f1, type: 3}
+    - target: {fileID: 13700000, guid: e74dc3d85568ccb4eb0c82ffb26649f1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9eba8f12406d6e14b87ea95627756400, type: 2}

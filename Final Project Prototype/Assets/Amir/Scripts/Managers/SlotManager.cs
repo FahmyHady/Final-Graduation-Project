@@ -74,7 +74,8 @@ public class SlotManager : MonoBehaviour
     private void CheckReadyPlayers()
     {
         var readyPlayers = handlers.Where(i => i.State == SlotState.Ready).Select(i => i).ToList();
-        if (readyPlayers.Count == handlers.Count) { readyBtn.enabled = true; readyText.color = Color.white; }
+       if (readyPlayers.Count == handlers.Count) { readyBtn.enabled = true; readyText.color = Color.white; }
+       // if (readyPlayers.Count >=2) { readyBtn.enabled = true; readyText.color = Color.white; }
         else { readyBtn.enabled = false; readyText.color = Color.black; }
     }
 
@@ -108,6 +109,7 @@ public class SlotManager : MonoBehaviour
                 {
                     if (GamePad.GetButtonDown(AcceptedBtnKey, item) && !indices.Contains(item) && item > 0)
                     {
+                        //TODO
                         indices.Add(item);
                         slots.Dequeue().Assign(item);
                         break;

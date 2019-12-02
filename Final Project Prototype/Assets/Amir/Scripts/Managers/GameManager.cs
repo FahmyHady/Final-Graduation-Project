@@ -56,7 +56,10 @@ public class GameManager : MonoBehaviour
     public void StartRound() {
         SceneManager.LoadSceneAsync(2);
     }
-
+    public void TutorialLevel()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void NewGame() {
         totalScore = 0.0f;
         playedRound = 0;

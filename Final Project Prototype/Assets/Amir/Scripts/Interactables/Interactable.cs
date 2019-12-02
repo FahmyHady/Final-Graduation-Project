@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private int interactionPlacesNum;
 
     [SerializeField] private Transform interactionTransform;
-    private bool isInteracting;
+    private bool isInteracting = true;
     [SerializeField] [HideInInspector] private bool isPattern = false;
     [SerializeField] private bool isTimed = true;
 
@@ -43,7 +43,21 @@ public class Interactable : MonoBehaviour
     #endregion Fields
 
     #region Properties
-    public bool HasInteracted { get => hasInteracted && isInteracting; set => hasInteracted = value; }
+    public bool HasInteracted
+    {
+        get
+        {
+            if (conditionalInteractionPlace)
+            {
+                return isInteracting;
+            }
+            else
+            {
+                return hasInteracted;
+            }
+        }
+        set => hasInteracted = value;
+    }
     public float HoldTime { get => holdTime; }
     public bool IsTimed { get => isTimed; }
     public int Pattern { get => (int)pattern; }
@@ -88,8 +102,8 @@ public class Interactable : MonoBehaviour
 
     private void CheckInteractedPlaces()
     {
-        if (interactedPlaces == interactionPlacesNum) { isInteracting = true; }
-        else { isInteracting = false; }
+        if (interactedPlaces == interactionPlacesNum) { isInteracting = false; }
+        else { isInteracting = true; }
     }
 
     private void HandleModelMaterial()
@@ -112,7 +126,7 @@ public class Interactable : MonoBehaviour
         HandleModelMaterial();
         if (!IsTimed) holdTime = 0.0f;
         else pattern = PatternDifficulty.Easy;
-        isInteracting = !conditionalInteractionPlace;
+        isInteracting = conditionalInteractionPlace;
         if (!conditionalInteractionPlace)
             interactedPlaces = 0;
     }

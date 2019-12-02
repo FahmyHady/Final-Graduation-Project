@@ -43,10 +43,16 @@ public class MeteorMovmentController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+
         if (other.gameObject.tag == "Child" && model != null)
         {
             shouldRiseEvent = !other.gameObject.GetComponentInParent<PlayerStateInfo>().IsControllerBurned;
             (other.transform.gameObject.GetComponentInChildren<VolcanoCurseHandler>() as ICurseHandler)?.Curse();
+        }
+        else if (other.gameObject.layer==11)
+        {
+            other.gameObject.GetComponent<Interactable>().Type = InteractableType.Damaged;
         }
         Destroy();
         Instantiate(explosion, transform.position, Quaternion.identity);
@@ -61,7 +67,7 @@ public class MeteorMovmentController : MonoBehaviour
     {
         if (!isFire) return;
         dir = target - this.transform.position;
-        if (dir.magnitude > 0.2f) this.transform.Translate(dir.normalized * moveSpeed);
+        if (dir.magnitude > 0.2f) this.transform.Translate(dir.normalized * moveSpeed*Time.deltaTime);
         else
         {
             Destroy();

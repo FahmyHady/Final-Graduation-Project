@@ -1,1 +1,0 @@
-1-AnyPlayer script can be merged into BaseCharacter script for more optimization. There's no need to seperate the two so far.

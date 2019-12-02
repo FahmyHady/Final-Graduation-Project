@@ -13,7 +13,7 @@ public class Cloud : MonoBehaviour
     #endregion Fields
 
     #region Methods
-    private void Start()
+    private void Awake()
     {
         particleEffect = transform.GetChild(0).gameObject;
         myLocation = transform.position;

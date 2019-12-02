@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &1822
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3239841193829150928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.987185, y: 3.418843, z: 0.9351915}
-  m_Center: {x: -2.45589, y: 1.6936656, z: 0.4592219}
 --- !u!1 &901
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,6 +32,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239841193829150928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.987185, y: 3.418843, z: 0.9351915}
+  m_Center: {x: -2.45589, y: 1.6936656, z: 0.4592219}
 --- !u!1001 &4762494506949964687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: c1ac6f0ed8c644a4eb49aaa51e75bef3, type: 3}
+      objectReference: {fileID: 4300000, guid: 6465cb6680874064696e36a3a793785d, type: 3}
     - target: {fileID: 4002118671458073742, guid: f1e391b1fa7e74a4a9ecdb7bea568122,
         type: 3}
       propertyPath: m_IsActive
