@@ -14181,6 +14181,7 @@ MonoBehaviour:
   regenFieldParticleEffect: {fileID: 3160821268488390332}
   staminaRegeImprovedRate: 15
   throwingHandle: {fileID: 3248853183772000661}
+  meteorDestructionStaminaCost: 10
 --- !u!135 &807710809
 SphereCollider:
   m_ObjectHideFlags: 0

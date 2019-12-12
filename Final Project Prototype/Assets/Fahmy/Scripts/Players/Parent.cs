@@ -24,7 +24,7 @@ public class Parent : BaseCharacter
 
     float finalFixRate;
     float finalRegenRate;
-
+    public float meteorDestructionStaminaCost;
     #endregion Fields
 
     #region Methods
@@ -186,6 +186,10 @@ public class Parent : BaseCharacter
                     ApplyFinalFixRate();
                 }
             }
+        }
+        else if (other.gameObject.layer==14)
+        {
+            myStateInfo.CurrentStamina -= meteorDestructionStaminaCost;
         }
     }
 

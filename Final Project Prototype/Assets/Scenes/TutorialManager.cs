@@ -16,10 +16,14 @@ public class TutorialManager : MonoBehaviour
     public GameObject parentPrefab;
     public GameObject AresPrefab;
     public GameObject AresObstaclePrefab;
+    public Transform AresObstacleSpawnPoint;
     public GameObject AphroditePrefab;
     public GameObject AphroditeObstaclePrefab;
+    public Transform AphroditeObstacleSpawnPoint;
     public GameObject ZeusPrefab;
     public GameObject ZeusObstaclePrefab;
+    public Transform ZeusObstacleSpawnPoint;
+
     PlayerStateInfo temp;
 
     #region Stage1
@@ -53,6 +57,8 @@ public class TutorialManager : MonoBehaviour
     {
         TutorialText.text = ArabicFixer.Fix(TutorialText.text, false, false);
         Invoke("StageOneStart", 3);
+        FindObjectOfType<PlayerStateInfo>().Player.Controller = GamepadInput.GamePad.Index.One;
+
     }
     void StageOneStart()
     {
@@ -91,8 +97,9 @@ public class TutorialManager : MonoBehaviour
         {
             CallBubbleAnimate("تمام! ");
             Invoke("StageOnePartThreeStart", 4);
-            activePlayer.gameObject.GetComponent<PlayerStateInfo>().IsControllerDisable = true;
             activePlayer.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            activePlayer.gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", 0);
+            activePlayer.gameObject.GetComponent<PlayerStateInfo>().IsControllerDisable = true;
             activePlayer.gameObject.GetComponentInChildren<ParentSkillAndAnimationHandler>().enabled=false;
 
         }
@@ -154,9 +161,8 @@ public class TutorialManager : MonoBehaviour
     {
         objectSaved = false;
         activePlayer.gameObject.SetActive(false);
-        GameObject temp = Instantiate(AresObstaclePrefab, new Vector3(31, 19.2f, 1.63f), Quaternion.identity);
+        GameObject temp = Instantiate(AresObstaclePrefab, AresObstacleSpawnPoint);
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
-        temp.transform.localScale = Vector3.one * 0.7f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
         temp = Instantiate(AresPrefab, new Vector3(28.5f, 19, -3.5f), Quaternion.identity);
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
@@ -196,9 +202,8 @@ public class TutorialManager : MonoBehaviour
     {
         objectSaved = false;
         activePlayer.gameObject.SetActive(false);
-        GameObject temp = Instantiate(AphroditeObstaclePrefab, new Vector3(31, 19.2f, 23f), Quaternion.identity);
+        GameObject temp = Instantiate(AphroditeObstaclePrefab, AphroditeObstacleSpawnPoint);
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
-        temp.transform.localScale = Vector3.one * 0.4f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
         temp = Instantiate(AphroditePrefab, new Vector3(28.5f, 19, 23-3.5f), Quaternion.identity);
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
@@ -239,9 +244,8 @@ public class TutorialManager : MonoBehaviour
         objectSaved = false;
         activePlayer.gameObject.SetActive(false);
 
-        GameObject temp = Instantiate(ZeusObstaclePrefab, new Vector3(26.43f, 19.2f, 38.28f),Quaternion.Euler(0,-73.4f,0));
+        GameObject temp = Instantiate(ZeusObstaclePrefab, ZeusObstacleSpawnPoint);
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
-        temp.transform.localScale = Vector3.one * 0.7f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
         temp = Instantiate(ZeusPrefab, new Vector3(28.5f, 19, 38.28f - 3.5f), Quaternion.identity);
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
