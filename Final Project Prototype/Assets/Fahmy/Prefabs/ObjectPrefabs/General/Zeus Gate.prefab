@@ -131,11 +131,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211518636058992004}
-  - component: {fileID: 8211518636058992011}
   - component: {fileID: 8075283203148939107}
+  - component: {fileID: 7525048345829880332}
   m_Layer: 13
   m_Name: key
-  m_TagString: Key
+  m_TagString: ZeusBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,21 +155,6 @@ Transform:
   m_Father: {fileID: 8211518635470346496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &8211518636058992011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8211518636058992005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10bf9da7f12829e45a973d39f8cb04ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Door: {fileID: 1268359799281572289}
-  lightingStrike: {fileID: 100010, guid: b6919c1446f57ee4d8c9ec426183084b, type: 3}
-  doorspeed: 1
 --- !u!135 &8075283203148939107
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -183,3 +168,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8832057
   m_Center: {x: 1.04, y: 0.17575821, z: -0.57}
+--- !u!114 &7525048345829880332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211518636058992005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aaaaf8f1b433349865e808c561e371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 100010, guid: b6919c1446f57ee4d8c9ec426183084b, type: 3}

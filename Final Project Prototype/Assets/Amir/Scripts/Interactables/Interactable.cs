@@ -4,7 +4,6 @@
 [RequireComponent(typeof(TimeHoldinghandler))]
 [RequireComponent(typeof(InteractableScore))]
 [RequireComponent(typeof(SphereCollider))]
-[ExecuteInEditMode]
 public class Interactable : MonoBehaviour
 {
     #region Fields

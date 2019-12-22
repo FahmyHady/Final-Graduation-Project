@@ -14,6 +14,7 @@ TagManager:
   - FxTemporaire
   - Boulder
   - MagicBlock
+  - ZeusBlock
   layers:
   - Default
   - TransparentFX

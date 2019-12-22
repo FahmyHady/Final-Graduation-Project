@@ -26,7 +26,7 @@ public class Child : BaseCharacter
                     switch (SelectedChar)
                     {
                         case Character.Zeus:
-                            if (objectInFrontOfMe && objectInFrontOfMe.tag == "Key")
+                            if (objectInFrontOfMe && objectInFrontOfMe.tag == "ZeusBlock")
                             {
                                 if (!amIUsingAnySkill() && CheckStamina(skillOneStaminaCost))
                                 {
@@ -77,10 +77,9 @@ public class Child : BaseCharacter
 
                         skillOneUsed = false;
                         disableOrEnableController();
-                        if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<Key>() != null)
+                        if (objectInFrontOfMe != null && objectInFrontOfMe.gameObject.GetComponent<ZeusBlock>() != null)
                         {
-                            objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
-                           // objectInFrontOfMe.gameObject.GetComponent<Key>().vanish();
+                            objectInFrontOfMe.gameObject.GetComponent<ZeusBlock>().Vanish();
                             myStateInfo.CurrentStamina -= skillOneStaminaCost;
                             AudioManager.Play(AudioManager.AudioItems.Zeus, "Bolt");
                         }

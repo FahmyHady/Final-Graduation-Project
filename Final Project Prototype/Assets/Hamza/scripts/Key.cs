@@ -6,30 +6,59 @@ public class Key : MonoBehaviour
 {
     #region Fields
     public GameObject Door;
-    public GameObject lightingStrike;
-
+    public GameObject effect;
+    Vector3 newPos;
     public float doorspeed;
-    bool interacted = false;
-
+    public bool canInteract;
+    public bool interacted;
+    Parent parent;
     #endregion Fields
 
     #region Methods
-    public void vanish()
+    private void Start()
     {
-        Instantiate(lightingStrike, transform.position, transform.rotation);
-        Instantiate(lightingStrike, Door.transform.position, Door.transform.rotation);
-        interacted = true;
+        newPos = new Vector3(Door.transform.localPosition.x - 5, Door.transform.localPosition.y, Door.transform.localPosition.z);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Parent")
+        {
+            canInteract = true;
+            parent = other.GetComponent<Parent>();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        canInteract = false;
+        parent = null;
+    }
     private void Update()
     {
-
-        if (interacted)
+        if (parent && parent.myStateInfo.Controller.XDown && canInteract)
         {
+            Open();
+        }
 
-            Door.transform.position = Vector3.Lerp(Door.transform.position, new Vector3(Door.transform.position.x, -4.5f, Door.transform.position.z), Time.time * doorspeed);
+    }
+    public void Open()
+    {
+        if (!interacted)
+        {
+            interacted = true;
+            Instantiate(effect, transform.position, transform.rotation);
+            StartCoroutine(DoorOpen());
         }
     }
 
+
+    IEnumerator DoorOpen()
+    {
+        while (Door.transform.localPosition != newPos)
+        {
+            Door.transform.localPosition = Vector3.MoveTowards(Door.transform.localPosition, newPos, Time.deltaTime * doorspeed);
+            yield return null;
+        }
+    }
     #endregion Methods
 }

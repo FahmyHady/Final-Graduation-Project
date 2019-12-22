@@ -14,9 +14,9 @@ public class CameraPuls : MonoBehaviour
     float endLerp = 0.95f;
     public void StartPlue()
     {
-        volume.profile = profile;
-        elpTime = 0.0f;
-        InvokeRepeating(nameof(UpdatePerSec), 0, loopRate);
+        //volume.profile = profile;
+        //elpTime = 0.0f;
+        //InvokeRepeating(nameof(UpdatePerSec), 0, loopRate);
     }
 
     private void UpdatePerSec()
@@ -32,7 +32,8 @@ public class CameraPuls : MonoBehaviour
             endLerp = t;
             lerpStepValee = 0;
         }
-        else {
+        else
+        {
             lerpStepValee += lerpStep * 0.1f;
         }
         volume.weight += lerpStepValee;

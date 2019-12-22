@@ -66,7 +66,7 @@ public class TimeHoldinghandler : MonoBehaviour
             {
                 timeEnd?.Invoke();
                 StopTime();
-                //Debug.Log("Done");
+              //  Debug.Log("Done");
             }
         }
     }
