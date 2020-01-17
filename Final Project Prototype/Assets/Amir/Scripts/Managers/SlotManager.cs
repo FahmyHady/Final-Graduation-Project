@@ -9,7 +9,7 @@ public class SlotManager : MonoBehaviour
     #region Fields
     private static SlotManager manager;
     [SerializeField] private GamePad.Button acceptedBtnKey;
-    [SerializeField] private List<Color> colors;
+    [SerializeField] private List<Sprite> sprite;
     [SerializeField] private List<SlotHandler> handlers;
     private List<GamePad.Index> indices;
     [SerializeField] private Button readyBtn;
@@ -27,25 +27,25 @@ public class SlotManager : MonoBehaviour
 
     #region Methods
 
-    public Color GetNextColor(ref int index)
+    public Sprite GetNextSprite(ref int index)
     {
-        index = (index + 1) % colors.Count;
-        return colors[index];
+        index = (index + 1) % sprite.Count;
+        return sprite[index];
     }
 
-    public Color GetPrevColor(ref int index)
+    public Sprite GetPrevSprite(ref int index)
     {
-        index = (index - 1 + colors.Count) % colors.Count;
-        return colors[index];
+        index = (index - 1 + sprite.Count) % sprite.Count;
+        return sprite[index];
     }
 
-    public void Ready(Color readyColor)
+    public void Ready(Sprite readySprite)
     {
         var notReadySlot = handlers.Where(i => i.State != SlotState.Stady && i.State != SlotState.Ready).Select(i => i).ToList();
-        foreach (var item in notReadySlot) { item.CheckColor(readyColor); }
+        foreach (var item in notReadySlot) { item.CheckSprite(readySprite); }
         var toReadySlot = handlers.Where(i => i.State == SlotState.Stady).Select(i => i).First();
         toReadySlot.Ready();
-        colors.Remove(readyColor);
+        sprite.Remove(readySprite);
         CheckReadyPlayers();
     }
 
@@ -60,11 +60,11 @@ public class SlotManager : MonoBehaviour
         if (indices.Contains(index)) indices.Remove(index);
     }
 
-    public void UnReady(Color color)
+    public void UnReady(Sprite sprite)
     {
         var unReadySlot = handlers.Where(i => i.State == SlotState.UnReady).Select(i => i).ToList();
         foreach (var item in unReadySlot) { item.UnReady(); }
-        colors.Add(color);
+        this.sprite.Add(sprite);
         CheckReadyPlayers();
     }
 

@@ -14,14 +14,12 @@ public class AssignPanelHandler : MonoBehaviour
     public void SetControllerName(string str)
     { assigneText.text = str; }
 
-    public void SetPanelColor(Color pColor)
+    public void SetPanelSprite(Sprite pSprite)
     {
-        BGImg.color = pColor;
-        pxImg.color = pColor;
+        BGImg.sprite = pSprite;
+        pxImg.sprite = pSprite;
     }
 
-    private void Start() { }
-
-    private void Update() { }
+  
     #endregion Methods
 }

@@ -8,8 +8,8 @@ public class UINavigationHandler : MonoBehaviour
     #region Fields
     private Vector2 axis;
     private AxisEventData currentAxis;
-    private GameObject currentButton;
-    private float timeBetweenInputs = 0.1f;
+    [SerializeField] private GameObject currentButton;
+    private float timeBetweenInputs = 0.2f;
     private float timer = 0;
     [SerializeField] private GameObject defaultButtonObj;
     [SerializeField] private GameObject backButtonObj;
