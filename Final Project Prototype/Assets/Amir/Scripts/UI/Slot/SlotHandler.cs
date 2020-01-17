@@ -10,7 +10,7 @@ public class SlotHandler : MonoBehaviour
     private int colorIndex;
     [SerializeField] private GamePad.Index controller;
     private bool isDone;
-    private Sprite notSelectedSprite;
+    private ReadyAndNotReadySpritePair notSelectedSprite;
     [SerializeField] private GameObject ReadyPanel;
     [SerializeField] private SlotState state;
     [SerializeField] private GameObject unAssignPanel;
@@ -31,18 +31,18 @@ public class SlotHandler : MonoBehaviour
         unAssignPanel.gameObject.SetActive(false);
         assignPanelHandler.SetControllerName(controller.ToString());
         assignPanel.gameObject.SetActive(true);
-        assignPanelHandler?.SetPanelSprite(notSelectedSprite);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
         IsDone = false;
     }
 
     public void CheckSprite(Sprite readySprite)
-    { if (notSelectedSprite == readySprite) { HandleNextSprite(); } }
+    { if (notSelectedSprite.readySprite == readySprite) { HandleNextSprite(); } }
 
     public void Ready()
     {
         State = SlotState.Ready;
         assignPanel.gameObject.SetActive(false);
-        readyBG.sprite = notSelectedSprite;
+        readyBG.sprite = notSelectedSprite.readySprite;
         ReadyPanel.gameObject.SetActive(true);
     }
 
@@ -66,14 +66,14 @@ public class SlotHandler : MonoBehaviour
     {
         notSelectedSprite = SlotManager.Manager.GetNextSprite(ref colorIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
-        assignPanelHandler?.SetPanelSprite(notSelectedSprite);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
     private void HandlePrevSprite()
     {
         notSelectedSprite = SlotManager.Manager.GetPrevSprite(ref colorIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
-        assignPanelHandler?.SetPanelSprite(notSelectedSprite);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
     private void Start()

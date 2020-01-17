@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+[System.Serializable]
+public struct ReadyAndNotReadySpritePair
+{
+    public Sprite unreadySprite;
+    public Sprite readySprite;
 
+}
 public class SlotManager : MonoBehaviour
 {
     #region Fields
     private static SlotManager manager;
     [SerializeField] private GamePad.Button acceptedBtnKey;
-    [SerializeField] private List<Sprite> sprite;
+    [SerializeField] private List<ReadyAndNotReadySpritePair> sprite;
     [SerializeField] private List<SlotHandler> handlers;
     private List<GamePad.Index> indices;
     [SerializeField] private Button readyBtn;
@@ -27,22 +33,22 @@ public class SlotManager : MonoBehaviour
 
     #region Methods
 
-    public Sprite GetNextSprite(ref int index)
+    public ReadyAndNotReadySpritePair GetNextSprite(ref int index)
     {
         index = (index + 1) % sprite.Count;
         return sprite[index];
     }
 
-    public Sprite GetPrevSprite(ref int index)
+    public ReadyAndNotReadySpritePair GetPrevSprite(ref int index)
     {
         index = (index - 1 + sprite.Count) % sprite.Count;
         return sprite[index];
     }
 
-    public void Ready(Sprite readySprite)
+    public void Ready(ReadyAndNotReadySpritePair readySprite)
     {
         var notReadySlot = handlers.Where(i => i.State != SlotState.Stady && i.State != SlotState.Ready).Select(i => i).ToList();
-        foreach (var item in notReadySlot) { item.CheckSprite(readySprite); }
+        foreach (var item in notReadySlot) { item.CheckSprite(readySprite.readySprite); }
         var toReadySlot = handlers.Where(i => i.State == SlotState.Stady).Select(i => i).First();
         toReadySlot.Ready();
         sprite.Remove(readySprite);
@@ -60,7 +66,7 @@ public class SlotManager : MonoBehaviour
         if (indices.Contains(index)) indices.Remove(index);
     }
 
-    public void UnReady(Sprite sprite)
+    public void UnReady(ReadyAndNotReadySpritePair sprite)
     {
         var unReadySlot = handlers.Where(i => i.State == SlotState.UnReady).Select(i => i).ToList();
         foreach (var item in unReadySlot) { item.UnReady(); }
