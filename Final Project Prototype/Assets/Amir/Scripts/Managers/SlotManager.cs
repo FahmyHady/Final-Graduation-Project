@@ -8,14 +8,15 @@ public struct ReadyAndNotReadySpritePair
 {
     public Sprite unreadySprite;
     public Sprite readySprite;
-
+    public CharNames thisChar;
 }
+public enum CharNames { Hera, Aphrodite, Ares, Zeus } //This order is important for assigning them
 public class SlotManager : MonoBehaviour
 {
     #region Fields
     private static SlotManager manager;
     [SerializeField] private GamePad.Button acceptedBtnKey;
-    [SerializeField] private List<ReadyAndNotReadySpritePair> sprite;
+    [SerializeField] private List<ReadyAndNotReadySpritePair> sprite; 
     [SerializeField] private List<SlotHandler> handlers;
     private List<GamePad.Index> indices;
     [SerializeField] private Button readyBtn;
@@ -23,6 +24,7 @@ public class SlotManager : MonoBehaviour
     [SerializeField] private GamePad.Button rejectBtnKey;
     [SerializeField] private UINavigationHandler iNavigationHandler;
     private Queue<SlotHandler> slots;
+    List<SlotHandler> readyPlayers;
     #endregion Fields
 
     #region Properties
@@ -79,14 +81,22 @@ public class SlotManager : MonoBehaviour
 
     private void CheckReadyPlayers()
     {
-        var readyPlayers = handlers.Where(i => i.State == SlotState.Ready).Select(i => i).ToList();
-       if (readyPlayers.Count == handlers.Count) { readyBtn.enabled = true; readyText.color = Color.white; }
-       // if (readyPlayers.Count >=2) { readyBtn.enabled = true; readyText.color = Color.white; }
+        readyPlayers = handlers.Where(i => i.State == SlotState.Ready).Select(i => i).ToList();
+        //if (readyPlayers.Count == handlers.Count) { readyBtn.enabled = true; readyText.color = Color.white; }
+        //TODO
+        if (readyPlayers.Count >= 2 &&
+            readyPlayers.Any(i => i.notSelectedSprite.thisChar==CharNames.Hera))
+        {
+            readyBtn.enabled = true; readyText.color = Color.white;
+        }
         else { readyBtn.enabled = false; readyText.color = Color.black; }
     }
 
     private void Confirm()
-    { for (int i = 0; i < handlers.Count; i++) { handlers[i].ConfirmPlayer(); } }
+    {
+        PlayerPrefs.SetInt("NumberOfReadyPlayers", readyPlayers.Count);//TODO //To use later to assign controls in premanager and destroy extra players
+        for (int i = 0; i < handlers.Count; i++) { handlers[i].ConfirmPlayer(); }
+    }
 
     private void OnValidate()
     { if (acceptedBtnKey == rejectBtnKey) { rejectBtnKey++; } }

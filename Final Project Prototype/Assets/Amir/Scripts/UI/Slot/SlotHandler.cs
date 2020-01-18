@@ -7,15 +7,16 @@ public class SlotHandler : MonoBehaviour
     #region Fields
     [SerializeField] private GameObject assignPanel;
     private AssignPanelHandler assignPanelHandler;
-    private int colorIndex;
+    private int spriteIndex;
     [SerializeField] private GamePad.Index controller;
     private bool isDone;
-    private ReadyAndNotReadySpritePair notSelectedSprite;
+    public ReadyAndNotReadySpritePair notSelectedSprite;
     [SerializeField] private GameObject ReadyPanel;
     [SerializeField] private SlotState state;
     [SerializeField] private GameObject unAssignPanel;
     [SerializeField] PlayerInfo player;
     [SerializeField] Image readyBG;
+  static  int savedPlayerNumber;
     #endregion Fields
 
     #region Properties
@@ -24,6 +25,8 @@ public class SlotHandler : MonoBehaviour
     #endregion Properties
 
     #region Methods
+
+
     public void Assign(GamePad.Index _Controller)
     {
         controller = _Controller;
@@ -51,7 +54,7 @@ public class SlotHandler : MonoBehaviour
         State = SlotState.Unassign;
         unAssignPanel.gameObject.SetActive(true);
         assignPanel.gameObject.SetActive(false);
-        colorIndex = -1;
+        spriteIndex = -1;
         HandleNextSprite();
     }
 
@@ -64,20 +67,22 @@ public class SlotHandler : MonoBehaviour
 
     private void HandleNextSprite()
     {
-        notSelectedSprite = SlotManager.Manager.GetNextSprite(ref colorIndex);
+        notSelectedSprite = SlotManager.Manager.GetNextSprite(ref spriteIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
         assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
     private void HandlePrevSprite()
     {
-        notSelectedSprite = SlotManager.Manager.GetPrevSprite(ref colorIndex);
+        notSelectedSprite = SlotManager.Manager.GetPrevSprite(ref spriteIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
         assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
     private void Start()
-    { assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>(); }
+    {
+        savedPlayerNumber = 0;
+        assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>(); }
 
     // Update is called once per frame
     private void Update()
@@ -110,6 +115,8 @@ public class SlotHandler : MonoBehaviour
     }
     public void ConfirmPlayer() {
         player.Controller = controller;
+        PlayerPrefs.SetInt("pickedChar/SpriteIndex"+savedPlayerNumber,(int)notSelectedSprite.thisChar);//Picked character sprite number and match it in the start of the next scene with character list
+        savedPlayerNumber++;                                    //the characters in the character list have to have same order as the sprites
      //   player.Outline = outLine;
     }
     #endregion Methods

@@ -7,6 +7,6 @@ public interface IRandomize
     #endregion Properties
 
     #region Methods
-    void Ranomize(ref GameObject @object);
+    void Assign(ref GameObject @object);
     #endregion Methods
 }
