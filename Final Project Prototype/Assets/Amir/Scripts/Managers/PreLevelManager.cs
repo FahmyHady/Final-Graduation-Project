@@ -8,7 +8,7 @@ public class PreLevelManager : MonoBehaviour
     private float elapsedTime;
     [SerializeField] private List<PortalHandler> portals;
     private int readyPlayerNum;
-    [SerializeField] private RoleRandomizerHandler roleHandler;
+    [SerializeField] private RoleAssignHandler roleHandler;
 
     [Range(5, 30)]
     [SerializeField] private int startDelay;
@@ -35,8 +35,8 @@ public class PreLevelManager : MonoBehaviour
     private void HandlePlayersRole()
     {
         GameObject obj =null;
-        roleHandler.Ranomize(ref obj);
-        for (int i = 0; i < portals.Count; i++)
+        roleHandler.Assign(ref obj);
+        for (int i = 0; i < roleHandler.Infos.Count; i++)
         {
             portals[i].SetColor(roleHandler.Infos[i].Player.Outline);
         }
@@ -44,7 +44,7 @@ public class PreLevelManager : MonoBehaviour
 
     private void CheckReadyPlayers()
     {
-        if (startDelay > 5 && ReadyPlayerNum == portals.Count+1)
+        if (startDelay > 5 && ReadyPlayerNum == roleHandler.Infos.Count + 1)
         {
             elapsedTime = 0.0f;
             startDelay = 5;

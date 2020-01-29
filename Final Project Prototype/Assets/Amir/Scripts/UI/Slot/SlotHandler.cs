@@ -7,15 +7,16 @@ public class SlotHandler : MonoBehaviour
     #region Fields
     [SerializeField] private GameObject assignPanel;
     private AssignPanelHandler assignPanelHandler;
-    private int colorIndex;
+    private int spriteIndex;
     [SerializeField] private GamePad.Index controller;
     private bool isDone;
-    private Color outLine;
+    public ReadyAndNotReadySpritePair notSelectedSprite;
     [SerializeField] private GameObject ReadyPanel;
     [SerializeField] private SlotState state;
     [SerializeField] private GameObject unAssignPanel;
     [SerializeField] PlayerInfo player;
     [SerializeField] Image readyBG;
+  static  int savedPlayerNumber;
     #endregion Fields
 
     #region Properties
@@ -24,6 +25,8 @@ public class SlotHandler : MonoBehaviour
     #endregion Properties
 
     #region Methods
+
+
     public void Assign(GamePad.Index _Controller)
     {
         controller = _Controller;
@@ -31,18 +34,18 @@ public class SlotHandler : MonoBehaviour
         unAssignPanel.gameObject.SetActive(false);
         assignPanelHandler.SetControllerName(controller.ToString());
         assignPanel.gameObject.SetActive(true);
-        assignPanelHandler?.SetPanelColor(outLine);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
         IsDone = false;
     }
 
-    public void CheckColor(Color readyColor)
-    { if (outLine == readyColor) { HandleNextColor(); } }
+    public void CheckSprite(Sprite readySprite)
+    { if (notSelectedSprite.readySprite == readySprite) { HandleNextSprite(); } }
 
     public void Ready()
     {
         State = SlotState.Ready;
         assignPanel.gameObject.SetActive(false);
-        readyBG.color = new Color(outLine.r, outLine.g, outLine.b, 0.5f);
+        readyBG.sprite = notSelectedSprite.readySprite;
         ReadyPanel.gameObject.SetActive(true);
     }
 
@@ -51,8 +54,8 @@ public class SlotHandler : MonoBehaviour
         State = SlotState.Unassign;
         unAssignPanel.gameObject.SetActive(true);
         assignPanel.gameObject.SetActive(false);
-        colorIndex = -1;
-        HandleNextColor();
+        spriteIndex = -1;
+        HandleNextSprite();
     }
 
     public void UnReady()
@@ -62,22 +65,24 @@ public class SlotHandler : MonoBehaviour
         ReadyPanel.gameObject.SetActive(false);
     }
 
-    private void HandleNextColor()
+    private void HandleNextSprite()
     {
-        outLine = SlotManager.Manager.GetNextColor(ref colorIndex);
+        notSelectedSprite = SlotManager.Manager.GetNextSprite(ref spriteIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
-        assignPanelHandler?.SetPanelColor(outLine);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
-    private void HandlePrevColor()
+    private void HandlePrevSprite()
     {
-        outLine = SlotManager.Manager.GetPrevColor(ref colorIndex);
+        notSelectedSprite = SlotManager.Manager.GetPrevSprite(ref spriteIndex);
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Hover");
-        assignPanelHandler?.SetPanelColor(outLine);
+        assignPanelHandler?.SetPanelSprite(notSelectedSprite.unreadySprite);
     }
 
     private void Start()
-    { assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>(); }
+    {
+        savedPlayerNumber = 0;
+        assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>(); }
 
     // Update is called once per frame
     private void Update()
@@ -92,25 +97,27 @@ public class SlotHandler : MonoBehaviour
             else if (State == SlotState.Ready)
             {
                 State = SlotState.UnReady;
-                SlotManager.Manager.UnReady(outLine);
+                SlotManager.Manager.UnReady(notSelectedSprite);
             }
         }
         else if (State == SlotState.Assigned)
         {
-            if (GamePad.GetButtonDown(GamePad.Button.LeftShoulder, controller)) { HandlePrevColor(); }
-            else if (GamePad.GetButtonDown(GamePad.Button.RightShoulder, controller)) { HandleNextColor(); }
+            if (GamePad.GetButtonDown(GamePad.Button.LeftShoulder, controller)) { HandlePrevSprite(); }
+            else if (GamePad.GetButtonDown(GamePad.Button.RightShoulder, controller)) { HandleNextSprite(); }
             else if (GamePad.GetButtonDown(SlotManager.Manager.AcceptedBtnKey, controller) && IsDone)
             {
                 State = SlotState.Stady;
                 AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start");
-                SlotManager.Manager.Ready(outLine);
+                SlotManager.Manager.Ready(notSelectedSprite);
             }
             else if (!IsDone) { IsDone = true; }
         }
     }
     public void ConfirmPlayer() {
         player.Controller = controller;
-        player.Outline = outLine;
+        PlayerPrefs.SetInt("pickedChar/SpriteIndex"+savedPlayerNumber,(int)notSelectedSprite.thisChar);//Picked character sprite number and match it in the start of the next scene with character list
+        savedPlayerNumber++;                                    //the characters in the character list have to have same order as the sprites
+     //   player.Outline = outLine;
     }
     #endregion Methods
 }

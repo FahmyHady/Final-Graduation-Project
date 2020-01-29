@@ -29,7 +29,7 @@ public class PlaceRandomizerHandler : MonoBehaviour, IRandomize
     IEnumerator RanRandPlaceDelay(GameObject @object, float delay) {
         yield return new WaitForSeconds(delay);
         var obj = Instantiate(@object);
-        Ranomize(ref obj);
+        Assign(ref obj);
         if (obj == null || obj?.GetComponentInChildren<RandomPlaceObj>().Place == null)
         {
             Destroy(obj);
@@ -39,7 +39,7 @@ public class PlaceRandomizerHandler : MonoBehaviour, IRandomize
     public void RandPlace(GameObject @object, float delay) {
         StartCoroutine(RanRandPlaceDelay(@object, delay));
     }
-    public void Ranomize(ref GameObject @object)
+    public void Assign(ref GameObject @object)
     {
         Transform randTransform = GetLocation();
         if (randTransform == null)

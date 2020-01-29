@@ -19,7 +19,7 @@ public class RandomPlaceManager : MonoBehaviour
                 {
                     value = Random.Range(1, place.placeObjs.Count - 1);
                     obj = Instantiate(place.placeObjs[value]);
-                    place.place.Ranomize(ref obj);
+                    place.place.Assign(ref obj);
                     if (obj.GetComponentInChildren<RandomPlaceObj>().Place == null)
                     {
                         Destroy(obj);

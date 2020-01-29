@@ -14109,7 +14109,7 @@ MonoBehaviour:
   fixRate: 0
   id: 0
   maxStamina: 200
-  player: {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
+  player: {fileID: 0}
   regenRate: 10
   role: 5
   score: 0
