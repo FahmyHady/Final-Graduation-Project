@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GamepadInput;
-[ExecuteInEditMode]
 public class LiftObject : MonoBehaviour
 {
     GamepadState gamepad;
@@ -56,9 +55,6 @@ public class LiftObject : MonoBehaviour
         
         Gizmos.DrawWireSphere(transform.position, rad);
     }
-    private void OnValidate()
-    {
-        
-    }
+
 
 }

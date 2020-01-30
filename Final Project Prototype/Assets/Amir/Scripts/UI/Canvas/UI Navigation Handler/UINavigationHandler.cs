@@ -107,8 +107,8 @@ public class UINavigationHandler : MonoBehaviour
             ExecuteEvents.Execute(currentButton, currentAxis, ExecuteEvents.moveHandler);
         }
     }
-    private void OnValidate()
-    { if (acceptBtn == backBtn) { backBtn++; } }
+    //private void OnValidate()
+    //{ if (acceptBtn == backBtn) { backBtn++; } }
 
     private void Update()
     {

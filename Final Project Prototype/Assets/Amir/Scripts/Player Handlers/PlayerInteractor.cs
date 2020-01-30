@@ -2,7 +2,6 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerStateInfo))]
-[ExecuteInEditMode]
 public class PlayerInteractor : MonoBehaviour
 {
     #region Fields

@@ -98,8 +98,7 @@ public class SlotManager : MonoBehaviour
         for (int i = 0; i < handlers.Count; i++) { handlers[i].ConfirmPlayer(); }
     }
 
-    private void OnValidate()
-    { if (acceptedBtnKey == rejectBtnKey) { rejectBtnKey++; } }
+
 
     private void Start()
     {

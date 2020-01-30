@@ -9,12 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400002}
-  - component: {fileID: 11400004}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  - component: {fileID: 11400000}
-  - component: {fileID: 11400010}
-  - component: {fileID: 11400012}
   - component: {fileID: 10800000}
   m_Layer: 0
   m_Name: Ball
@@ -37,39 +33,6 @@ Transform:
   m_Father: {fileID: 400004}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeae3e9af6e21a14ab40b3002927111a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RandomMoveRadius: 0
-  RandomMoveSpeed: 0
-  RandomRange: 0
-  RandomMoveCoordinates: 0
-  EffectOnHitObject: {fileID: 0}
-  GoLight: {fileID: 0}
-  Acceleration:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  AcceleraionTime: 1
-  IsCenterLightPosition: 0
-  IsLookAt: 0
-  AttachAfterCollision: 0
-  IsRootMove: 1
-  IsLocalSpaceRandomMove: 0
-  IsDeviation: 0
-  SendCollisionMessage: 1
-  ResetParentPositionOnDisable: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -115,58 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4fd3fcecef5fa549906304904e90744, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isRotate: 1
-  fps: 30
-  x: 100
-  y: 150
-  z: 200
---- !u!114 &11400010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f8ee2e15161e6438ae903bc4455f46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PropertyName: _CutOut
-  MaxFloat: 1
-  StartDelay: 0
-  FadeInSpeed: 0
-  FadeOutDelay: 0
-  FadeOutSpeed: 0
-  FadeOutAfterCollision: 0
-  UseHideStatus: 0
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f3de8ed7cb1e44a9515836082a4cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsReverse: 0
-  TimeDelay: 0.1
-  IsLookAt: 0
 --- !u!108 &10800000
 Light:
   m_ObjectHideFlags: 0
@@ -214,7 +125,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400004}
-  - component: {fileID: 11400006}
   m_Layer: 0
   m_Name: FireMeteor1
   m_TagString: Untagged
@@ -241,34 +151,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc1db87478e94a42875321f75d0c7d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectType: 0
-  ColliderRadius: 0.2
-  EffectRadius: 0
-  UseMoveVector: 0
-  Target: {fileID: 0}
-  MoveVector: {x: 0, y: 0, z: 1}
-  MoveSpeed: 6
-  IsHomingMove: 0
-  MoveDistance: 20
-  IsVisible: 1
-  InstanceBehaviour: 0
-  DeactivateTimeDelay: 4
-  DestroyTimeDelay: 10
-  LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &100006
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +162,6 @@ GameObject:
   - component: {fileID: 400006}
   - component: {fileID: 19800002}
   - component: {fileID: 19900002}
-  - component: {fileID: 11400002}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
@@ -4968,26 +4849,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2194caa8a026284d975848a1238e90e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShaderColorName: _TintColor
-  StartDelay: 0
-  FadeInSpeed: 0
-  FadeOutDelay: 0
-  FadeOutSpeed: 0.5
-  UseSharedMaterial: 0
-  FadeOutAfterCollision: 0
-  UseHideStatus: 0
 --- !u!1 &100008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9516,7 +9377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 400010}
   - component: {fileID: 10800002}
-  - component: {fileID: 11400008}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -9576,24 +9436,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a756d46fe4caa14ea36974ed86f959d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartDelay: 0
-  FadeInSpeed: 0.1
-  FadeOutDelay: 0
-  FadeOutSpeed: 2
-  FadeOutAfterCollision: 1
-  UseHideStatus: 0
 --- !u!1 &100020
 GameObject:
   m_ObjectHideFlags: 0

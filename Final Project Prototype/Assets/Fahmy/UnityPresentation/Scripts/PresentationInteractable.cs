@@ -5,7 +5,6 @@ using System.Collections;
 [RequireComponent(typeof(TimeHoldinghandler))]
 [RequireComponent(typeof(InteractableScore))]
 [RequireComponent(typeof(SphereCollider))]
-[ExecuteInEditMode]
 public class PresentationInteractable : MonoBehaviour
 {
     #region Fields
@@ -105,16 +104,16 @@ public class PresentationInteractable : MonoBehaviour
     private void OnTriggerExit(Collider other)
     { if (other.gameObject.CompareTag(playerTag)) { other.GetComponent<PresentationInteractor>().Exit(); } }
 
-    private void OnValidate()
-    {
-        isPattern = !IsTimed;
-        HandleModelMaterial();
-        if (!IsTimed) holdTime = 0.0f;
-        else pattern = PatternDifficulty.Easy;
-        isInteracting = !conditionalInteractionPlace;
-        if (!conditionalInteractionPlace)
-            interactedPlaces = 0;
-    }
+    //private void OnValidate()
+    //{
+    //    isPattern = !IsTimed;
+    //    HandleModelMaterial();
+    //    if (!IsTimed) holdTime = 0.0f;
+    //    else pattern = PatternDifficulty.Easy;
+    //    isInteracting = !conditionalInteractionPlace;
+    //    if (!conditionalInteractionPlace)
+    //        interactedPlaces = 0;
+    //}
 
     private void Start()
     {

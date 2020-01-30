@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 76b242a500f0c664bbc72b6380723679
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: fence1
+    100004: fence10
+    100006: fence2
+    100008: fence3
+    100010: fence4
+    100012: fence5
+    100014: fence6
+    100016: fence7
+    100018: fence8
+    100020: fence9
+    100022: inoic_pillar_shift_II4
+    100024: inoic_pillar_shift_II5
+    100026: polySurface11
+    100028: polySurface12
+    100030: seat4
+    100032: seat5
+    100034: tree3
+    100036: trunk1
+    400000: //RootNode
+    400002: fence1
+    400004: fence10
+    400006: fence2
+    400008: fence3
+    400010: fence4
+    400012: fence5
+    400014: fence6
+    400016: fence7
+    400018: fence8
+    400020: fence9
+    400022: inoic_pillar_shift_II4
+    400024: inoic_pillar_shift_II5
+    400026: polySurface11
+    400028: polySurface12
+    400030: seat4
+    400032: seat5
+    400034: tree3
+    400036: trunk1
+    2100000: lambert2
+    2100002: lambert10
+    2100004: lambert8
+    2300000: fence1
+    2300002: fence10
+    2300004: fence2
+    2300006: fence3
+    2300008: fence4
+    2300010: fence5
+    2300012: fence6
+    2300014: fence7
+    2300016: fence8
+    2300018: fence9
+    2300020: inoic_pillar_shift_II4
+    2300022: inoic_pillar_shift_II5
+    2300024: polySurface11
+    2300026: polySurface12
+    2300028: seat4
+    2300030: seat5
+    2300032: tree3
+    2300034: trunk1
+    3300000: fence1
+    3300002: fence10
+    3300004: fence2
+    3300006: fence3
+    3300008: fence4
+    3300010: fence5
+    3300012: fence6
+    3300014: fence7
+    3300016: fence8
+    3300018: fence9
+    3300020: inoic_pillar_shift_II4
+    3300022: inoic_pillar_shift_II5
+    3300024: polySurface11
+    3300026: polySurface12
+    3300028: seat4
+    3300030: seat5
+    3300032: tree3
+    3300034: trunk1
+    4300000: trunk1
+    4300002: fence1
+    4300004: fence2
+    4300006: fence3
+    4300008: fence4
+    4300010: fence5
+    4300012: polySurface11
+    4300014: polySurface12
+    4300016: fence6
+    4300018: fence7
+    4300020: fence8
+    4300022: fence9
+    4300024: fence10
+    4300026: seat4
+    4300028: seat5
+    4300030: tree3
+    4300032: inoic_pillar_shift_II4
+    4300034: inoic_pillar_shift_II5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

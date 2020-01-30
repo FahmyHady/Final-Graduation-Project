@@ -46,8 +46,8 @@ public class CurseManager : MonoBehaviour
         if (lockedKeys >= maxCursesAtTime && IsInvoking(nameof(UpdateParSec))) StopUpdate();
     }
 
-    private void OnValidate()
-    { HandelCursesValues(); }
+    //private void OnValidate()
+    //{ HandelCursesValues(); }
 
     private void RunUpdate()
     { InvokeRepeating(nameof(UpdateParSec), 0, 1); }
