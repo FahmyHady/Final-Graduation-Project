@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1053877849507196266}
   - component: {fileID: 1053877849510063446}
   - component: {fileID: 1053877849508966294}
+  - component: {fileID: 3394413923817261935}
   m_Layer: 0
   m_Name: ionic_pillar
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3394413923817261935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053877849506771274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 83.88318, y: 266.83948, z: 80.69306}
+  m_Center: {x: 40.68682, y: 133.41974, z: -37.873978}
