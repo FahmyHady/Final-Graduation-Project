@@ -9,15 +9,7 @@ public class GameplayLevelManager : MonoBehaviour
     public Key door1Key;
     public int stageOneItemsCount;
     int countItemsFixed;
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void IncreaseFixedCount()
     {
         countItemsFixed++;
@@ -29,7 +21,7 @@ public class GameplayLevelManager : MonoBehaviour
         if (countItemsFixed >= stageOneItemsCount)
         {
             StartCoroutine(ButtonAppear(door1Key.gameObject));
-        }
+        } 
     }
 
     IEnumerator ButtonAppear(GameObject button)
