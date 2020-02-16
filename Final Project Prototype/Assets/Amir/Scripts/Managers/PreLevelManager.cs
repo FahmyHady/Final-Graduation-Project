@@ -34,8 +34,7 @@ public class PreLevelManager : MonoBehaviour
     }
     private void HandlePlayersRole()
     {
-        GameObject obj =null;
-        roleHandler.Assign(ref obj);
+        roleHandler.Assign();
         for (int i = 0; i < roleHandler.Infos.Count; i++)
         {
             portals[i].SetColor(roleHandler.Infos[i].Player.Outline);

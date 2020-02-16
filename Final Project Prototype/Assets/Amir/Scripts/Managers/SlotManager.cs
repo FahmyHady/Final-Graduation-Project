@@ -94,7 +94,7 @@ public class SlotManager : MonoBehaviour
 
     private void Confirm()
     {
-        PlayerPrefs.SetInt("NumberOfReadyPlayers", readyPlayers.Count);//TODO //To use later to assign controls in premanager and destroy extra players
+        PlayerPrefs.SetInt("NumberOfReadyPlayers", readyPlayers.Count);//To use later to assign controls in premanager and destroy extra players
         for (int i = 0; i < handlers.Count; i++) { handlers[i].ConfirmPlayer(); }
     }
 

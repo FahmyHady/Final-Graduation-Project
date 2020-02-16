@@ -7,6 +7,7 @@ public class PlayerInfo : ScriptableObject
     #region Fields
     [SerializeField] private GamePad.Index controller;
     [SerializeField] private Color outline;
+    public int myNumber;
     #endregion Fields
 
     #region Properties

@@ -16,7 +16,7 @@ public class SlotHandler : MonoBehaviour
     [SerializeField] private GameObject unAssignPanel;
     [SerializeField] PlayerInfo player;
     [SerializeField] Image readyBG;
-  static  int savedPlayerNumber;
+    static int savedPlayerNumber;
     #endregion Fields
 
     #region Properties
@@ -47,6 +47,8 @@ public class SlotHandler : MonoBehaviour
         assignPanel.gameObject.SetActive(false);
         readyBG.sprite = notSelectedSprite.readySprite;
         ReadyPanel.gameObject.SetActive(true);
+        player.Controller = controller;
+        GameManager.Instance.controllerKeyandSpriteKey.Add(player.myNumber, (int)notSelectedSprite.thisChar);
     }
 
     public void ResetSlot()
@@ -63,6 +65,9 @@ public class SlotHandler : MonoBehaviour
         State = SlotState.Assigned;
         assignPanel.gameObject.SetActive(true);
         ReadyPanel.gameObject.SetActive(false);
+        player.Controller = GamePad.Index.Any;
+        GameManager.Instance.controllerKeyandSpriteKey.Remove(player.myNumber);
+
     }
 
     private void HandleNextSprite()
@@ -82,7 +87,9 @@ public class SlotHandler : MonoBehaviour
     private void Start()
     {
         savedPlayerNumber = 0;
-        assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>(); }
+        assignPanelHandler = assignPanel.GetComponentInChildren<AssignPanelHandler>();
+        player.Controller = GamePad.Index.Any;
+    }
 
     // Update is called once per frame
     private void Update()
@@ -113,11 +120,12 @@ public class SlotHandler : MonoBehaviour
             else if (!IsDone) { IsDone = true; }
         }
     }
-    public void ConfirmPlayer() {
-        player.Controller = controller;
-        PlayerPrefs.SetInt("pickedChar/SpriteIndex"+savedPlayerNumber,(int)notSelectedSprite.thisChar);//Picked character sprite number and match it in the start of the next scene with character list
+    public void ConfirmPlayer()
+    {
+     
+        //PlayerPrefs.SetInt("pickedChar/SpriteIndex" + savedPlayerNumber, (int)notSelectedSprite.thisChar);//Picked character sprite number and match it in the start of the next scene with character list
         savedPlayerNumber++;                                    //the characters in the character list have to have same order as the sprites
-     //   player.Outline = outLine;
+                                                                //   player.Outline = outLine;
     }
     #endregion Methods
 }

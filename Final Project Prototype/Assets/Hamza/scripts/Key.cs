@@ -7,7 +7,7 @@ public class Key : MonoBehaviour
     #region Fields
     public GameObject Door;
     public GameObject effect;
-    Vector3 newPos;
+     public  Transform newPos;
     public float doorspeed;
     public bool canInteract;
     public bool interacted;
@@ -15,10 +15,7 @@ public class Key : MonoBehaviour
     #endregion Fields
 
     #region Methods
-    private void Start()
-    {
-        newPos = new Vector3(Door.transform.localPosition.x - 5, Door.transform.localPosition.y, Door.transform.localPosition.z);
-    }
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,9 +51,10 @@ public class Key : MonoBehaviour
 
     IEnumerator DoorOpen()
     {
-        while (Door.transform.localPosition != newPos)
+        Vector3 positionToMoveTo = newPos.position;
+        while (Door.transform.position != newPos.position)
         {
-            Door.transform.localPosition = Vector3.MoveTowards(Door.transform.localPosition, newPos, Time.deltaTime * doorspeed);
+            Door.transform.position = Vector3.MoveTowards(Door.transform.position, positionToMoveTo, Time.deltaTime * doorspeed);
             yield return null;
         }
     }

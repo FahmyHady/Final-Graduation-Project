@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: 0
   outline: {r: 1, g: 0.989607, b: 0, a: 1}
+  myNumber: 0

@@ -6,7 +6,7 @@ public class RoundManager : MonoBehaviour
 {
     #region Fields
     private static RoundManager instance;
-    [SerializeField] private List<PlayerStateInfo> children;
+    private List<PlayerStateInfo> children;
     [SerializeField] private PlayerStateInfo parent;
     [SerializeField] private ClockManager clock;
     [SerializeField] private RandomPlaceManager placeManager;
@@ -22,7 +22,9 @@ public class RoundManager : MonoBehaviour
     #endregion Properties
 
     #region Methods
-    public void SetInteractable() {
+
+    public void SetInteractable()
+    {
         //interactablesNum++;
     }
     public List<PlayerStateInfo> GetChildren()
@@ -45,7 +47,8 @@ public class RoundManager : MonoBehaviour
     private void Awake()
     { if (Instance == null) Instance = this; }
 
-    public void TimeEnd() {
+    public void TimeEnd()
+    {
         if (interactablesNum == 0)
             RoundEnd(true);
         else
@@ -54,8 +57,9 @@ public class RoundManager : MonoBehaviour
             RoundEnd(false);
         }
     }
-    public Color GetChildOutline(Character character) {
-        Color color =default;
+    public Color GetChildOutline(Character character)
+    {
+        Color color = default;
         switch (character)
         {
             case Character.Zeus:
@@ -70,13 +74,15 @@ public class RoundManager : MonoBehaviour
         }
         return color;
     }
-    public void FixItem() {
+    public void FixItem()
+    {
         interactablesNum--;
         if (interactablesNum < 0)
         {
             interactablesNum = 0;
         }
-        else if (interactablesNum == 0) {
+        else if (interactablesNum == 0)
+        {
             bounsTime = (clock.RemainingTime / 6);
         }
     }
@@ -88,17 +94,10 @@ public class RoundManager : MonoBehaviour
 
     private void Start()
     {
-        List<PlayerInfo> players = GameManager.Instance.Players;
-        parent.Player = players[0];
-        parent.CurrentStamina = parent.MaxStamina;
-        for (int i = 0; i < children.Count; i++)
-        {
-            children[i].Player = players[i + 1];
-            children[i].CurrentStamina = children[i].MaxStamina;
-        }
+        children = GameplayLevelManager.instance.assignHandler.infos;
         interactablesNum = GameManager.Instance.MaxInteractableFixed;
-        clock.StartClock();
-        placeManager.StartRandom();
+        clock?.StartClock();
+        placeManager?.StartRandom();
     }
     #endregion Methods
 }

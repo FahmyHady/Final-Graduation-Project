@@ -3,12 +3,12 @@ using System.Security.Cryptography;
 using UnityEngine;
 using System.Linq;
 
-public class RoleAssignHandler : MonoBehaviour, IRandomize
+public class RoleAssignHandler : MonoBehaviour
 {
     #region Fields
     [SerializeField] private bool hasManyUses;
-    [SerializeField] private List<PlayerStateInfo> infos;
-    [SerializeField] private List<PlayerInfo> players;
+    public List<PlayerStateInfo> infos;
+    public List<PlayerInfo> players;
     #endregion Fields
 
     #region Properties
@@ -21,14 +21,14 @@ public class RoleAssignHandler : MonoBehaviour, IRandomize
 
 
 
-    public void Assign(ref GameObject @object)
+    public void Assign()
     {
-        int numberOfReadyPlayers = PlayerPrefs.GetInt("NumberOfReadyPlayers");
+     //   int numberOfReadyPlayers = PlayerPrefs.GetInt("NumberOfReadyPlayers");
 
-        for (int i = 0; i < numberOfReadyPlayers; i++)
+        for (int i = 0; i < GameManager.Instance.controllerKeyandSpriteKey.Count; i++)
         {
             int numb = PlayerPrefs.GetInt("pickedChar/SpriteIndex" + i);
-            Infos[i].Player = Players[numb];
+            Infos[GameManager.Instance.controllerKeyandSpriteKey.Values.ElementAt(i)].Player = Players[GameManager.Instance.controllerKeyandSpriteKey.Keys.ElementAt(i)];
         }
         List<PlayerStateInfo> playersToRemove = infos.Where(i => i.Player == null).ToList();
         for (int i = 0; i < playersToRemove.Count; i++)

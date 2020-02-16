@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [Header("Round Time")]
     [SerializeField] int minTime;
     [SerializeField] int hTime;
+    public Dictionary<int, int> controllerKeyandSpriteKey = new Dictionary<int, int>();
     #endregion Fields
 
     #region Properties
@@ -43,7 +44,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
     }
     void FinishGame() {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadScene("MainMenu");
     }
     public void EndGame(string teamName)
     {
@@ -54,18 +55,18 @@ public class GameManager : MonoBehaviour
         SaveAndLoadManager.Save(Teams);
     }
     public void StartRound() {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadScene("GameplayScene");
     }
     public void TutorialLevel()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Tutorial Scene");
     }
     public void NewGame() {
         totalScore = 0.0f;
         playedRound = 0;
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start2");
         Rounds = new int[maxRounds];
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene("Pre-Level Character Pick");
     }
     public void RoundEnd(bool isDone) {
         Rounds[playedRound] = isDone ? 1 : 2;
@@ -73,7 +74,7 @@ public class GameManager : MonoBehaviour
         if (playedRound == maxRounds)
             FinishGame();
         else
-            SceneManager.LoadSceneAsync(1);
+            SceneManager.LoadScene("Pre-Level Character Pick");
     }
     // Start is called before the first frame update
     private void Start()

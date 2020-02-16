@@ -6,18 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Amir/Scenes/Start Setup/MainMenu.unity
+    path: Assets/All Main Scenes/MainMenu.unity
     guid: bd80b3e94b33ca749bb394ba4afc7520
   - enabled: 1
     path: Assets/All Main Scenes/Pre-Level Character Pick.unity
     guid: dbbd2a5b342534c4da9b0ce3db635602
+  - enabled: 1
+    path: Assets/All Main Scenes/GameplayScene.unity
+    guid: 83ef79bc8ece47445be355c5125e848e
   - enabled: 1
     path: Assets/All Main Scenes/Timed Game Scene.unity
     guid: 02caaa9784ddb384a8b61ee9f70cd64b
   - enabled: 1
     path: Assets/All Main Scenes/Tutorial Scene.unity
     guid: 8aa3df92ad5ad1447b90bff9dc46e6d7
-  - enabled: 0
-    path: Assets/Fahmy/UnityPresentation/Unity Presentation.unity
-    guid: 58b34535d3b3657418872fbe25188025
   m_configObjects: {}
