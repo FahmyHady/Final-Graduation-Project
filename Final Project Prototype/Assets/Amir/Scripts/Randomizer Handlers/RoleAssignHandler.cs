@@ -6,6 +6,7 @@ using System.Linq;
 public class RoleAssignHandler : MonoBehaviour
 {
     #region Fields
+    public static RoleAssignHandler Instance;
     [SerializeField] private bool hasManyUses;
     public List<PlayerStateInfo> infos;
     public List<PlayerInfo> players;
@@ -19,11 +20,14 @@ public class RoleAssignHandler : MonoBehaviour
 
     #region Methods
 
-
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void Assign()
     {
-     //   int numberOfReadyPlayers = PlayerPrefs.GetInt("NumberOfReadyPlayers");
+        //   int numberOfReadyPlayers = PlayerPrefs.GetInt("NumberOfReadyPlayers");
 
         for (int i = 0; i < GameManager.Instance.controllerKeyandSpriteKey.Count; i++)
         {

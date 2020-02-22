@@ -15,6 +15,7 @@ TagManager:
   - Boulder
   - MagicBlock
   - ZeusBlock
+  - Meteor
   layers:
   - Default
   - TransparentFX

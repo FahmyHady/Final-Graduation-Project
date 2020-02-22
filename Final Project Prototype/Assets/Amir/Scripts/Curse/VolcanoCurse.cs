@@ -18,7 +18,7 @@ public class VolcanoCurse : MonoBehaviour, ICursed
     public void StartCurse()
     {
         GameObject controller = Instantiate(meteor, transform.position, transform.rotation);
-        controller.GetComponent<MeteorMovmentController>().Fire(RoundManager.Instance.GetRandomChild().transform.position+GetOffset());
+        controller.GetComponent<MeteorMovmentController>().Fire(GameplayLevelManager.instance.GetRandomMeteorTarget().transform.position+GetOffset());
     }
     Vector3 GetOffset() {
         return new Vector3((Random.value-0.5f) * radius, 0, (Random.value - 0.5f) * radius);

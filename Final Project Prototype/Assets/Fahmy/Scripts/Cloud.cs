@@ -4,22 +4,34 @@ using UnityEngine;
 public class Cloud : MonoBehaviour
 {
     #region Fields
+    public static Cloud Instance;
     public static Vector3 myLocation;
     [SerializeField] private float delayOfThrowBack;
     // [SerializeField] private Collider[] myBounds;
     [SerializeField] Transform[] LandingPoints;
     private Throw myThrowSkill;
     GameObject particleEffect;
+
     #endregion Fields
 
     #region Methods
     private void Awake()
     {
+        Instance = this;
         particleEffect = transform.GetChild(0).gameObject;
         myLocation = transform.position;
         myThrowSkill = GetComponent<Throw>();
     }
+    public void MoveMeAndMyChildrenToNewLocations(Transform[] newLocations)
+    {
 
+
+        transform.position = newLocations[0].position;
+        transform.rotation = newLocations[0].rotation;
+        LandingPoints[0].position = newLocations[1].position;
+        LandingPoints[1].position = newLocations[2].position;
+        LandingPoints[2].position = newLocations[3].position;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != 12)

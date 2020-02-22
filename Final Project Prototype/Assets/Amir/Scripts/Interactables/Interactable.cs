@@ -70,8 +70,6 @@ public class Interactable : MonoBehaviour
     {
         fixedEvent.Raise();
         AudioManager.Play(AudioManager.AudioItems.Interactable, "Fixed");
-
-        Destroy(this.transform.parent.gameObject, destroyDelay);
     }
 
     public void HoldPlace()
@@ -114,7 +112,14 @@ public class Interactable : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    { if (other.gameObject.CompareTag(playerTag)) { other.GetComponent<PlayerInteractor>().Enter(this); } }
+    {
+        if (other.gameObject.CompareTag(playerTag)) { other.GetComponent<PlayerInteractor>().Enter(this); }
+        else if (other.gameObject.CompareTag("Meteor") && Type != InteractableType.Damaged)
+        {
+            Type = InteractableType.Damaged;
+            GameplayLevelManager.instance.DecreaseFixedCount();
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     { if (other.gameObject.CompareTag(playerTag)) { other.GetComponent<PlayerInteractor>().Exit(); } }

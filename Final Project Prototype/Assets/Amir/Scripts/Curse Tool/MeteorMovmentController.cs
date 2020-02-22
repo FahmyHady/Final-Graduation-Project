@@ -6,7 +6,7 @@ public class MeteorMovmentController : MonoBehaviour
     [SerializeField] private GameEvent @event;
     [SerializeField] private float destroyTime;
     private Vector3 dir;
-    [SerializeField] private GameObject explosion;
+    [SerializeField] private ParticleSystem explosion;
     [SerializeField] private GameObject indicator;
     private bool isFire;
     [SerializeField] private Transform model;
@@ -50,12 +50,10 @@ public class MeteorMovmentController : MonoBehaviour
             shouldRiseEvent = !other.gameObject.GetComponentInParent<PlayerStateInfo>().IsControllerBurned;
             (other.transform.gameObject.GetComponentInChildren<VolcanoCurseHandler>() as ICurseHandler)?.Curse();
         }
-        else if (other.gameObject.layer==11)
-        {
-            other.gameObject.GetComponent<Interactable>().Type = InteractableType.Damaged;
-        }
+   
         Destroy();
-        Instantiate(explosion, transform.position, Quaternion.identity);
+        explosion.transform.parent = null;
+        explosion.Play();
         rb.detectCollisions = false;
         Destroy(this.gameObject, destroyTime);
         Destroy(place?.gameObject);

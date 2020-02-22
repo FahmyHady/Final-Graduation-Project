@@ -19,7 +19,7 @@ public class Key : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Parent")
+        if (other.gameObject.tag == "Parent" && other is CapsuleCollider)
         {
             canInteract = true;
             parent = other.GetComponent<Parent>();

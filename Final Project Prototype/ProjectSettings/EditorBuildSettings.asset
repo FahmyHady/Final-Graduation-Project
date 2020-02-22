@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/All Main Scenes/LoadingScene.unity
+    guid: 9fcf68f12071f9b46a3707cc10bb8da3
+  - enabled: 1
     path: Assets/All Main Scenes/MainMenu.unity
     guid: bd80b3e94b33ca749bb394ba4afc7520
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/All Main Scenes/GameplayScene.unity
     guid: 83ef79bc8ece47445be355c5125e848e
-  - enabled: 1
-    path: Assets/All Main Scenes/Timed Game Scene.unity
-    guid: 02caaa9784ddb384a8b61ee9f70cd64b
   - enabled: 1
     path: Assets/All Main Scenes/Tutorial Scene.unity
     guid: 8aa3df92ad5ad1447b90bff9dc46e6d7

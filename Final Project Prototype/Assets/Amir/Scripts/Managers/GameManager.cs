@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     #region Fields
@@ -34,8 +33,8 @@ public class GameManager : MonoBehaviour
     #region Methods
     private void Awake()
     {
-     
-            if (Instance == null)
+
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -43,8 +42,9 @@ public class GameManager : MonoBehaviour
         else
             Destroy(this.gameObject);
     }
-    void FinishGame() {
-        SceneManager.LoadScene("MainMenu");
+    void FinishGame()
+    {
+        StartCoroutine(SceneLoader.Instance.LoadNewScene(1));
     }
     public void EndGame(string teamName)
     {
@@ -54,33 +54,40 @@ public class GameManager : MonoBehaviour
         Teams.Add(team);
         SaveAndLoadManager.Save(Teams);
     }
-    public void StartRound() {
-        SceneManager.LoadScene("GameplayScene");
+    public void StartRound()
+    {
+        StartCoroutine(SceneLoader.Instance.LoadNewScene(3));
+
     }
     public void TutorialLevel()
     {
-        SceneManager.LoadScene("Tutorial Scene");
+        StartCoroutine(SceneLoader.Instance.LoadNewScene(4));
+
     }
-    public void NewGame() {
+    public void NewGame()
+    {
         totalScore = 0.0f;
         playedRound = 0;
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start2");
         Rounds = new int[maxRounds];
-        SceneManager.LoadScene("Pre-Level Character Pick");
+        StartCoroutine(SceneLoader.Instance.LoadNewScene(2));
+
     }
-    public void RoundEnd(bool isDone) {
+    public void RoundEnd(bool isDone)
+    {
         Rounds[playedRound] = isDone ? 1 : 2;
         playedRound++;
         if (playedRound == maxRounds)
             FinishGame();
         else
-            SceneManager.LoadScene("Pre-Level Character Pick");
+            StartCoroutine(SceneLoader.Instance.LoadNewScene(2));
     }
     // Start is called before the first frame update
     private void Start()
     { Teams = SaveAndLoadManager.Load(); }
 
-    public List<int> GetRoundTime() {
+    public List<int> GetRoundTime()
+    {
         List<int> vs = new List<int>();
         vs.Add(minTime);
         vs.Add(hTime);
@@ -89,6 +96,6 @@ public class GameManager : MonoBehaviour
     public void Exit()
     { Application.Quit(); }
     #endregion Methods
- 
-     
+
+
 }
