@@ -13,12 +13,16 @@ public class AudioManager : MonoBehaviour
     public SoundSources MainMenu;
     public SoundSources Skill;
     public SoundSources Teleport;
+    public SoundSources Door;
+    public SoundSources KeyButton;
 
     public AudioSource S_Aphrodite;
     public AudioSource S_Aris;
     public AudioSource S_BackgroundMusic;
     public AudioSource S_Event;
     public AudioSource S_Teleport;
+    public AudioSource S_Door;
+    public AudioSource S_KeyButton;
     //----------------------------------------------
     public AudioSource S_Hera;
     public AudioSource S_Interactable;
@@ -33,7 +37,7 @@ public class AudioManager : MonoBehaviour
 
     #region Enums
     public enum AudioItems
-    { Hera, Zeus, Aris, Aphrodite, MainMenu, Interactable, Skill, Teleport, Event, BackgroundMusic }
+    { Hera, Zeus, Aris, Aphrodite, MainMenu, Interactable, Skill, Teleport, Event, BackgroundMusic, Door , KeyButton }
     #endregion Enums
 
     #region Methods
@@ -90,6 +94,14 @@ public class AudioManager : MonoBehaviour
 
             case AudioItems.Teleport:
                 CheckSound(Teleport, S_Teleport, soundName);
+                break;
+
+            case AudioItems.Door:
+                CheckSound(Door, S_Door, soundName);
+                break;
+
+            case AudioItems.KeyButton:
+                CheckSound(KeyButton, S_KeyButton, soundName);
                 break;
         }
 
