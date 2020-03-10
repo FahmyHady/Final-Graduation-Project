@@ -18,4 +18,4 @@ MonoBehaviour:
     - MagicLift
     m_values:
     - {fileID: 8300000, guid: dc156c1e196d5394488992c10e864bc8, type: 3}
-    - {fileID: 8300000, guid: 97a8778ff8b7da54ea7ca935d6f4d2c2, type: 3}
+    - {fileID: 8300000, guid: 78c0292d339da8547b1ff3b0f8a7bb30, type: 3}

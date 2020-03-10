@@ -34,7 +34,10 @@ public class Key : MonoBehaviour
     {
         if (parent && parent.myStateInfo.Controller.XDown && canInteract)
         {
+            AudioManager.Play(AudioManager.AudioItems.KeyButton, "Click");
             Open();
+            AudioManager.Play(AudioManager.AudioItems.KeyButton, "Open");
+
         }
 
     }
