@@ -10,6 +10,9 @@ public class RoleAssignHandler : MonoBehaviour
     [SerializeField] private bool hasManyUses;
     public List<PlayerStateInfo> infos;
     public List<PlayerInfo> players;
+    public GameObject aphroditeItems;
+    public GameObject aresItems;
+    public GameObject zeusItems;
     #endregion Fields
 
     #region Properties
@@ -38,11 +41,26 @@ public class RoleAssignHandler : MonoBehaviour
         for (int i = 0; i < playersToRemove.Count; i++)
         {
             infos.Remove(playersToRemove[i]);
+            DestroyItems(playersToRemove[i].gameObject.name);
             Destroy(playersToRemove[i].gameObject);
         }
-
+        GameplayLevelManager.instance.FindItemsNumbers();
     }
-
+    void DestroyItems(string whoseItemsToDestroy)
+    {
+        switch (whoseItemsToDestroy)
+        {
+            case "Ares":
+                Destroy(aresItems);
+                break;
+            case "Aphrodite":
+                Destroy(aphroditeItems);
+                break;
+            case "Zeus":
+                Destroy(zeusItems);
+                break;
+        }
+    }
 
     #endregion Methods
 }

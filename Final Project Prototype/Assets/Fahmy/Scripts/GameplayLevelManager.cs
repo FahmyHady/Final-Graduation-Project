@@ -12,7 +12,7 @@ public class StageAndItsFixables
 public class GameplayLevelManager : MonoBehaviour
 {
     static public GameplayLevelManager instance;
-    public StageAndItsFixables[] stagesAndtheirFixables;
+    public List<StageAndItsFixables> stagesAndtheirFixables = new List<StageAndItsFixables>();
     public float buttonAppearSpeed;
     public Key door1Key;
     public Key door2Key;
@@ -43,6 +43,30 @@ public class GameplayLevelManager : MonoBehaviour
     {
         instance = this;
         assignHandler.Assign();
+
+    }
+    public void FindItemsNumbers()
+    {
+        StageAndItsFixables stageOneObj = new StageAndItsFixables();
+        stageOneObj.stageFixables = GameObject.FindGameObjectsWithTag("Stage One");
+        stageOneObj.stageNumber = 1;
+        StageAndItsFixables stageTwoObj = new StageAndItsFixables();
+        stageTwoObj.stageFixables = GameObject.FindGameObjectsWithTag("Stage Two");
+        stageTwoObj.stageNumber = 2;
+        StageAndItsFixables stageThreeObj = new StageAndItsFixables();
+        stageThreeObj.stageFixables = GameObject.FindGameObjectsWithTag("Stage Three");
+        stageThreeObj.stageNumber = 3;
+        StageAndItsFixables stageFourObj = new StageAndItsFixables();
+        stageFourObj.stageFixables = GameObject.FindGameObjectsWithTag("Stage Four");
+        stageFourObj.stageNumber = 4;
+        stageOneItemsCount = stageOneObj.stageFixables.Length;
+        stageTwoItemsCount = stageTwoObj.stageFixables.Length;
+        stageThreeItemsCount = stageThreeObj.stageFixables.Length;
+        stageFourItemsCount = stageFourObj.stageFixables.Length;
+        stagesAndtheirFixables.Add(stageOneObj);
+        stagesAndtheirFixables.Add(stageTwoObj);
+        stagesAndtheirFixables.Add(stageThreeObj);
+        stagesAndtheirFixables.Add(stageFourObj);
     }
     private void Start()
     {

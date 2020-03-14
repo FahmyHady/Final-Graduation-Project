@@ -16,6 +16,10 @@ TagManager:
   - MagicBlock
   - ZeusBlock
   - Meteor
+  - Stage One
+  - Stage Two
+  - Stage Three
+  - Stage Four
   layers:
   - Default
   - TransparentFX
