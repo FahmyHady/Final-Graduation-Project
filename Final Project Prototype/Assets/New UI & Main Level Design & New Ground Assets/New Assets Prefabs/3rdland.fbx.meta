@@ -1,14 +1,42 @@
 fileFormatVersion: 2
-guid: 52e7c6ac83538ec4d92cab3f421284a4
+guid: cabe9b802faf776428761a412125bcf0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: bridge3
+    100004: frontpillar
+    100006: rd_land
+    100008: temple_door
+    100010: temple_front
+    100012: templeroof
     400000: //RootNode
-    2100000: gate4
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: side_wall
+    400002: bridge3
+    400004: frontpillar
+    400006: rd_land
+    400008: temple_door
+    400010: temple_front
+    400012: templeroof
+    2100000: part3
+    2100002: part3_asstes
+    2300000: bridge3
+    2300002: frontpillar
+    2300004: rd_land
+    2300006: temple_door
+    2300008: temple_front
+    2300010: templeroof
+    3300000: bridge3
+    3300002: frontpillar
+    3300004: rd_land
+    3300006: temple_door
+    3300008: temple_front
+    3300010: templeroof
+    4300000: bridge3
+    4300002: rd_land
+    4300004: frontpillar
+    4300006: temple_door
+    4300008: temple_front
+    4300010: templeroof
   externalObjects: {}
   materials:
     importMaterials: 1

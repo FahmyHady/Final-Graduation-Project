@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 52e7c6ac83538ec4d92cab3f421284a4
+guid: aa74a9839c7193e4bacae18a7dca34c9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: gate4
+    2100000: lambert2
     2300000: //RootNode
     3300000: //RootNode
-    4300000: side_wall
+    4300000: loftedSurface1
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -49,7 +49,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

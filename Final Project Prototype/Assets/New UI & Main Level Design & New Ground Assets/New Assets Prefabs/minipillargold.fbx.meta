@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: 52e7c6ac83538ec4d92cab3f421284a4
+guid: 2649c2a664c967844877ddc64d89b2e0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: gate4
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: side_wall
+    100000: frontpillar1
+    100002: //RootNode
+    400000: frontpillar1
+    400002: //RootNode
+    2100000: part3_asstes
+    2300000: frontpillar1
+    3300000: frontpillar1
+    4300000: frontpillar1
   externalObjects: {}
   materials:
     importMaterials: 1

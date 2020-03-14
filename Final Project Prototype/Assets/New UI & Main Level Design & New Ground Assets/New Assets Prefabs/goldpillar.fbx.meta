@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 52e7c6ac83538ec4d92cab3f421284a4
+guid: aa03d825affb6c44f8a0031aba51c5d0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: gate4
+    2100000: assets_L2
     2300000: //RootNode
     3300000: //RootNode
-    4300000: side_wall
+    4300000: polySurface79
   externalObjects: {}
   materials:
     importMaterials: 1
