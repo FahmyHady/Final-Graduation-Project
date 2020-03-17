@@ -25,7 +25,6 @@ public class GameplayLevelManager : MonoBehaviour
     public Transform[] CloudAndChildrenLocationsOne;
     public Transform[] CloudAndChildrenLocationsTwo;
     public Transform[] CloudAndChildrenLocationsThree;
-    public Transform[] CloudAndChildrenLocationsFour;
     public CinemachineVirtualCamera cam1;
     public CinemachineVirtualCamera cam2;
     public CinemachineVirtualCamera cam3;
@@ -114,8 +113,8 @@ public class GameplayLevelManager : MonoBehaviour
             case 4:
                 cam4.Priority++;
                 currentCam = cam4;
-                Cloud.Instance.MoveMeAndMyChildrenToNewLocations(CloudAndChildrenLocationsFour);
-
+                //Cloud.Instance.MoveMeAndMyChildrenToNewLocations(CloudAndChildrenLocationsFour);
+                FindObjectOfType<CurseManager>().gameObject.SetActive(false);
                 break;
 
         }
@@ -130,21 +129,21 @@ public class GameplayLevelManager : MonoBehaviour
 
             StartCoroutine(ButtonAppear(door1Key.gameObject));
         }
-        else if (countItemsFixed >= stageTwoItemsCount && !passedLevel2)
+        else if (countItemsFixed >= stageTwoItemsCount && !passedLevel2 && passedLevel1)
         {
             passedLevel2 = true;
             countItemsFixed = 0;
 
             StartCoroutine(ButtonAppear(door2Key.gameObject));
         }
-        else if (countItemsFixed >= stageThreeItemsCount && !passedLevel3)
+        else if (countItemsFixed >= stageThreeItemsCount && !passedLevel3 && passedLevel2)
         {
             passedLevel3 = true;
             countItemsFixed = 0;
 
             StartCoroutine(ButtonAppear(door3Key.gameObject));
         }
-        else if (countItemsFixed >= stageFourItemsCount && !passedLevel4)
+        else if (countItemsFixed >= stageFourItemsCount && !passedLevel4 && passedLevel3)
         {
             passedLevel4 = true;
             countItemsFixed = 0;

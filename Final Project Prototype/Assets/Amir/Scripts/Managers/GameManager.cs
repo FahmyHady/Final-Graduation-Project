@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
     void FinishGame()
     {
-        StartCoroutine(SceneLoader.Instance.LoadNewScene(1));
+     SceneLoader.Instance.LoadANewScene(1);
     }
     public void EndGame(string teamName)
     {
@@ -56,12 +56,12 @@ public class GameManager : MonoBehaviour
     }
     public void StartRound()
     {
-        StartCoroutine(SceneLoader.Instance.LoadNewScene(3));
+        SceneLoader.Instance.LoadANewScene(3);
 
     }
     public void TutorialLevel()
     {
-        StartCoroutine(SceneLoader.Instance.LoadNewScene(4));
+       SceneLoader.Instance.LoadANewScene(5);
 
     }
     public void NewGame()
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         playedRound = 0;
         AudioManager.Play(AudioManager.AudioItems.MainMenu, "Start2");
         Rounds = new int[maxRounds];
-        StartCoroutine(SceneLoader.Instance.LoadNewScene(2));
+     SceneLoader.Instance.LoadANewScene(2);
 
     }
     public void RoundEnd(bool isDone)
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         if (playedRound == maxRounds)
             FinishGame();
         else
-            StartCoroutine(SceneLoader.Instance.LoadNewScene(2));
+          SceneLoader.Instance.LoadANewScene(2);
     }
     // Start is called before the first frame update
     private void Start()

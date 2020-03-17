@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using ArabicSupport;
 using Cinemachine;
-using UnityEngine.SceneManagement;
 public class TutorialManager : MonoBehaviour
 {
+    public GameObject startMenu;
     public CinemachineVirtualCamera[] virtualCameras;
     public GameObject lighteningSpawnEffect;
     public float buttonAppearSpeed;
@@ -23,7 +23,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject ZeusPrefab;
     public GameObject ZeusObstaclePrefab;
     public Transform ZeusObstacleSpawnPoint;
-
+    public float timeScale = 1;
     PlayerStateInfo temp;
 
     #region Stage1
@@ -49,15 +49,16 @@ public class TutorialManager : MonoBehaviour
     #region Stage4
     public GameObject Stage4;
     public TutorialKey door4Key;
-#endregion
+    #endregion
     MeteorMovmentController meteor;
     public GameObject meteorPrefab;
     public Parent activePlayer;
     void Start()
     {
+        Time.timeScale = timeScale;
         TutorialText.text = ArabicFixer.Fix(TutorialText.text, false, false);
         Invoke("StageOneStart", 3);
-        FindObjectOfType<PlayerStateInfo>().Player.Controller = GamepadInput.GamePad.Index.One;
+        FindObjectOfType<PlayerStateInfo>().Player.Controller = GamepadInput.GamePad.Index.Any;
 
     }
     void StageOneStart()
@@ -100,7 +101,7 @@ public class TutorialManager : MonoBehaviour
             activePlayer.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
             activePlayer.gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", 0);
             activePlayer.gameObject.GetComponent<PlayerStateInfo>().IsControllerDisable = true;
-            activePlayer.gameObject.GetComponentInChildren<ParentSkillAndAnimationHandler>().enabled=false;
+            activePlayer.gameObject.GetComponentInChildren<ParentSkillAndAnimationHandler>().enabled = false;
 
         }
         else
@@ -124,9 +125,9 @@ public class TutorialManager : MonoBehaviour
     }
     void StageOnePartThreeEnd()
     {
-     
 
-        
+
+
         if (activePlayer.gameObject.GetComponentInChildren<ParentSkillAndAnimationHandler>().enabled == false)
         {
             temp = stage1Part3.GetComponentInChildren<PlayerStateInfo>();
@@ -165,6 +166,9 @@ public class TutorialManager : MonoBehaviour
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
         temp = Instantiate(AresPrefab, new Vector3(28.5f, 19, -3.5f), Quaternion.identity);
+        PlayerStateInfo tempState = temp.GetComponent<PlayerStateInfo>();
+        tempState.Player = activePlayer.gameObject.GetComponent<PlayerStateInfo>().Player;
+        tempState.FixRate = 1.2f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
     }
     void StageTwoEnd()
@@ -203,9 +207,13 @@ public class TutorialManager : MonoBehaviour
         objectSaved = false;
         activePlayer.gameObject.SetActive(false);
         GameObject temp = Instantiate(AphroditeObstaclePrefab, AphroditeObstacleSpawnPoint);
+
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
-        temp = Instantiate(AphroditePrefab, new Vector3(28.5f, 19, 23-3.5f), Quaternion.identity);
+        temp = Instantiate(AphroditePrefab, new Vector3(28.5f, 19, 23 - 3.5f), Quaternion.identity);
+        PlayerStateInfo tempState = temp.GetComponent<PlayerStateInfo>();
+        tempState.Player = activePlayer.gameObject.GetComponent<PlayerStateInfo>().Player;
+        tempState.FixRate = 1.2f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
     }
 
@@ -248,6 +256,9 @@ public class TutorialManager : MonoBehaviour
         itemToFix2 = temp.GetComponentInChildren<Interactable>();
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
         temp = Instantiate(ZeusPrefab, new Vector3(28.5f, 19, 38.28f - 3.5f), Quaternion.identity);
+        PlayerStateInfo tempState = temp.GetComponent<PlayerStateInfo>();
+        tempState.Player = activePlayer.gameObject.GetComponent<PlayerStateInfo>().Player;
+        tempState.FixRate = 1.2f;
         Instantiate(lighteningSpawnEffect, temp.transform.position, Quaternion.identity);
     }
     void StageFourEnd()
@@ -303,13 +314,17 @@ public class TutorialManager : MonoBehaviour
             else if (door4Key.canInteract && !door4Key.interacted && objectSaved)
             {
                 CallBubbleAnimate("انت دلوقتى جاهز");
-                Invoke("LoadMenuScene",4);
+                Invoke("LoadMenuScene", 4);
             }
         }
+        if (activePlayer.myStateInfo.Controller.Start)
+        {
+            startMenu.SetActive(!startMenu.activeSelf);
+        } 
     }
-    void LoadMenuScene()
+    public void LoadMenuScene()
     {
-        SceneManager.LoadScene(0);
+        SceneLoader.Instance.LoadANewScene(1);
     }
 
     IEnumerator ButtonAppear(GameObject button)

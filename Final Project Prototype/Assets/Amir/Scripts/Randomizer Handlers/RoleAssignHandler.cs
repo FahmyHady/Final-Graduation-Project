@@ -44,20 +44,20 @@ public class RoleAssignHandler : MonoBehaviour
             DestroyItems(playersToRemove[i].gameObject.name);
             Destroy(playersToRemove[i].gameObject);
         }
-        GameplayLevelManager.instance.FindItemsNumbers();
+        GameplayLevelManager.instance?.FindItemsNumbers();
     }
     void DestroyItems(string whoseItemsToDestroy)
     {
         switch (whoseItemsToDestroy)
         {
             case "Ares":
-                Destroy(aresItems);
+                DestroyImmediate(aresItems);
                 break;
             case "Aphrodite":
-                Destroy(aphroditeItems);
+                DestroyImmediate(aphroditeItems);
                 break;
             case "Zeus":
-                Destroy(zeusItems);
+                DestroyImmediate(zeusItems);
                 break;
         }
     }

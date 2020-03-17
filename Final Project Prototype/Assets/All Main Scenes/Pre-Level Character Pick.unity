@@ -2220,6 +2220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: modular_midel
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ec6ac30b589b2754d8ad51b184356794, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ec6ac30b589b2754d8ad51b184356794, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.247734
@@ -2276,6 +2280,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.22212
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ec6ac30b589b2754d8ad51b184356794, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dcf3c9595e1164841b22564de3a0ee47, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6ac30b589b2754d8ad51b184356794, type: 3}
 --- !u!4 &510375558 stripped
@@ -5105,6 +5113,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0383c972ab0d0e145bbe8291773a77f2, type: 2}
   - {fileID: 11400000, guid: 8be844c721e63e94c8e12ddfc759edd6, type: 2}
   - {fileID: 11400000, guid: a9ef360e02024cb41aa260cd83fcea8a, type: 2}
+  aphroditeItems: {fileID: 0}
+  aresItems: {fileID: 0}
+  zeusItems: {fileID: 0}
 --- !u!4 &1550040683
 Transform:
   m_ObjectHideFlags: 0

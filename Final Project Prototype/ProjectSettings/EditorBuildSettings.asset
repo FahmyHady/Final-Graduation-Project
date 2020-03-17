@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/All Main Scenes/GameplayScene.unity
     guid: 83ef79bc8ece47445be355c5125e848e
   - enabled: 1
+    path: Assets/All Main Scenes/Winning Scene.unity
+    guid: 8a3068bb13c2480469562ea21d85e5bb
+  - enabled: 1
     path: Assets/All Main Scenes/Tutorial Scene.unity
     guid: 8aa3df92ad5ad1447b90bff9dc46e6d7
   m_configObjects: {}

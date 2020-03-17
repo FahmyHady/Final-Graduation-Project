@@ -117,7 +117,6 @@ public class Interactable : MonoBehaviour
         else if (other.gameObject.CompareTag("Meteor") && Type != InteractableType.Damaged)
         {
             Type = InteractableType.Damaged;
-            GameplayLevelManager.instance.DecreaseFixedCount();
         }
     }
 

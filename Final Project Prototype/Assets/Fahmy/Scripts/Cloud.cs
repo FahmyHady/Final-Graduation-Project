@@ -24,13 +24,12 @@ public class Cloud : MonoBehaviour
     }
     public void MoveMeAndMyChildrenToNewLocations(Transform[] newLocations)
     {
-
-
         transform.position = newLocations[0].position;
         transform.rotation = newLocations[0].rotation;
         LandingPoints[0].position = newLocations[1].position;
         LandingPoints[1].position = newLocations[2].position;
         LandingPoints[2].position = newLocations[3].position;
+        myLocation = transform.position;
     }
     private void OnTriggerEnter(Collider other)
     {

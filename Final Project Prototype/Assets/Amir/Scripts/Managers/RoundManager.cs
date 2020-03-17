@@ -83,7 +83,7 @@ public class RoundManager : MonoBehaviour
         }
         else if (interactablesNum == 0)
         {
-            bounsTime = (clock.RemainingTime / 6);
+           // bounsTime = (clock.RemainingTime / 6);
         }
     }
     private void RoundEnd(bool isDone)
@@ -96,8 +96,8 @@ public class RoundManager : MonoBehaviour
     {
         children = GameplayLevelManager.instance.assignHandler.infos;
         interactablesNum = GameManager.Instance.MaxInteractableFixed;
-        clock?.StartClock();
-        placeManager?.StartRandom();
+        //clock?.StartClock();
+      //  placeManager?.StartRandom();
     }
     #endregion Methods
 }
