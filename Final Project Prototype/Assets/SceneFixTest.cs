@@ -42,14 +42,7 @@ public class SceneFixTest : MonoBehaviour
             {
                 builder.Append(texts[i]);
             }
-            if (i == texts.Length - 2&& !(i % 2 == 0))
-            {
-                builder.Append(texts[i]);
-            }
-            if (i == texts.Length - 3 && !(i % 2 == 0))
-            {
-                builder.Append(texts[i]);
-            }
+
         }
 
         reader.Close();
