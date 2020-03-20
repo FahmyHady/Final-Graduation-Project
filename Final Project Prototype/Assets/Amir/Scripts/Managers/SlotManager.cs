@@ -132,14 +132,14 @@ public class SlotManager : MonoBehaviour
                 }
             }
         }
-        if (readyBtn.enabled)
-        {
-            if (GamePad.GetButtonDown(AcceptedBtnKey, GamePad.Index.Any))
-            {
-                iNavigationHandler.Submit();
-            }
-        }
-        else if (slots.Count == 4)
+        //if (readyBtn.enabled)
+        //{
+        //    if (GamePad.GetButtonDown(AcceptedBtnKey, GamePad.Index.Any))
+        //    {
+        //        iNavigationHandler.Submit();
+        //    }
+        //}
+         if (slots.Count == 4)
         {
             if (GamePad.GetButtonDown(RejectBtnKey, GamePad.Index.Any))
             {

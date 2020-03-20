@@ -351,6 +351,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b511b9263be8a543b5304354d458815, type: 3}
+    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -404,21 +419,6 @@ PrefabInstance:
     - target: {fileID: 2755142263157214348, guid: fe417498020e6134783b7e041154181e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6b511b9263be8a543b5304354d458815, type: 3}
-    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2755142263038353437, guid: fe417498020e6134783b7e041154181e,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2755142263157214350, guid: fe417498020e6134783b7e041154181e,
@@ -697,6 +697,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289181289752444194, guid: 7cbd254d15cd9e84d8df394b194ad6b3,
+        type: 3}
+      propertyPath: acceptedBtnKey
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cbd254d15cd9e84d8df394b194ad6b3, type: 3}

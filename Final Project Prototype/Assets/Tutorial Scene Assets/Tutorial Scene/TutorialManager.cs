@@ -53,12 +53,14 @@ public class TutorialManager : MonoBehaviour
     MeteorMovmentController meteor;
     public GameObject meteorPrefab;
     public Parent activePlayer;
+    bool pressedStart;
+    float t;
     void Start()
     {
         Time.timeScale = timeScale;
         TutorialText.text = ArabicFixer.Fix(TutorialText.text, false, false);
         Invoke("StageOneStart", 3);
-        FindObjectOfType<PlayerStateInfo>().Player.Controller = GamepadInput.GamePad.Index.Any;
+        FindObjectOfType<PlayerStateInfo>().Player.Controller = GamepadInput.GamePad.Index.One;
 
     }
     void StageOneStart()
@@ -317,10 +319,20 @@ public class TutorialManager : MonoBehaviour
                 Invoke("LoadMenuScene", 4);
             }
         }
-        if (activePlayer.myStateInfo.Controller.Start)
+        if (activePlayer.myStateInfo.Controller.Start && !pressedStart)
         {
+            pressedStart = true;
             startMenu.SetActive(!startMenu.activeSelf);
-        } 
+        }
+        if (pressedStart)
+        {
+            t += Time.deltaTime;
+            if (t>0.2f)
+            {
+                pressedStart = false;
+                t = 0;
+            }
+        }
     }
     public void LoadMenuScene()
     {

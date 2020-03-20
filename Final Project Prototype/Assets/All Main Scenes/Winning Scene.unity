@@ -5068,7 +5068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79993ce347bb644591daa8f9b31c949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWaitBeforeEndingScene: 10
+  timeToWaitBeforeEndingScene: 27
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
